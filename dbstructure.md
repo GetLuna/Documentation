@@ -49,15 +49,15 @@ The bans table is used to hold details of all current bans. It is important to n
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
 | _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
-| `cat_name` | `varchar(80)` | `&ldquo;New Category&rdquo;` | The name of the category. |
+| `cat_name` | `varchar(80)` | `"New Category"` | The name of the category. |
 | `disp_position` | `int(10)` | `0` | The position of this category in relation to the others. |
 
 ### censoring
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
 | _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
-| `search_for` | `varchar(60)` | `&rdquo;&rdquo;` | The term to search for. |
-| `replace_with` | `varchar(60)` | `&rdquo;&rdquo;` | The term to replace with. |
+| `search_for` | `varchar(60)` | `""` | The term to search for. |
+| `replace_with` | `varchar(60)` | `""` | The term to replace with. |
 
 ### config
 The config table holds key, value pairs for all the main configuration options. For performance reasons Luna caches these values and will only refresh the cache when they are updated via the admin panel.
@@ -66,14 +66,14 @@ For more information about the actual contents of the config table, see the $lun
 
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`conf_name`_ | `varchar(255)` | `&rdquo;&rdquo;` | The name of the configuration variable. General configuration options start with the prefix o_ and general permission options start with the prefix p_. |
+| _`conf_name`_ | `varchar(255)` | `""` | The name of the configuration variable. General configuration options start with the prefix o_ and general permission options start with the prefix p_. |
 | `conf_value` | `text` | `NULL` | The value of the configuration variable. |
 
 ### forums
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
 | _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
-| `forum_name` | `varchar(80)` | `&ldquo;New forum&rdquo;` | The name of the forum. |
+| `forum_name` | `varchar(80)` | `"New forum"` | The name of the forum. |
 | `forum_desc` | `text` | `NULL` | A description of the forum (may contain HTML). |
 | `moderators` | `text` | `NULL` | A serialized associative PHP array with moderator names ⇒ user IDs. |
 | `num_threads` | `mediumint(8)` | `0` | The number of threads the forum contains. |
@@ -108,7 +108,7 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
 | _`g_id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
-| `g_title` | `varchar(50)` | `&rdquo;&rdquo;` | The name of this group. |
+| `g_title` | `varchar(50)` | `""` | The name of this group. |
 | `g_user_title` | `varchar(50)` | `NULL` | The user title to be used for members of this group. |
 | `g_moderator` | `tinyint(1)` | `0` | Does this group have moderator privileges? |
 | `g_mod_edit_users` | `tinyint(1)` | `0` | If g_moderator, can members of this group edit users profiles? |
@@ -183,7 +183,7 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
 | `user_id` | `int(10)` | `1` | The ID of the user (or 1 if the user is a guest). |
-| `ident` | `varchar(200)` | `&rdquo;&rdquo;` | Identification string for the user (Username for logged in users, IP address for guests). |
+| `ident` | `varchar(200)` | `""` | Identification string for the user (Username for logged in users, IP address for guests). |
 | `logged` | `int(10)` | `0` | A UNIX timestamp representing the time of the users last activity. |
 | `idle` | `tinyint(1)` | `0` | If the user is idle or not (i.e. their last visit was more than o_timeout_online seconds ago, but less than o_timeout_visit seconds ago - see the $luna_config global variable). |
 | `last_comment` | `int(10)` | `NULL` | A UNIX timestamp representing the time the user last made a comment. |
@@ -193,7 +193,7 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
 | _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
-| `commenter` | `varchar(200)` | `&rdquo;&rdquo;` | The username of the user who created this comment. |
+| `commenter` | `varchar(200)` | `""` | The username of the user who created this comment. |
 | `commenter_id` | `int(10)` | `1` | The ID of the user who created this comment. |
 | `commenter_ip` | `varchar(39)` | `NULL` | The IP address of the user who created this comment. |
 | `commenter_email` | `varchar(80)` | `NULL` | If the comment was created by a guest, their email address. If it was created by a logged in user, then `NULL`. |
@@ -210,7 +210,7 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
 | _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
-| `rank` | `varchar(50)` | `&rdquo;&rdquo;` | The rank title. |
+| `rank` | `varchar(50)` | `""` | The rank title. |
 | `min_comments` | `mediumint(8)` | `0` | The number of comments a user must attain in order to reach the rank. |
 
 ### reports
@@ -230,7 +230,7 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
 | _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
-| `ident` | `varchar(200)` | `&rdquo;&rdquo;` | An identifier for the user who initiated the search. For a guest their IP address is used, for a logged in user, their username. |
+| `ident` | `varchar(200)` | `""` | An identifier for the user who initiated the search. For a guest their IP address is used, for a logged in user, their username. |
 | `search_data` | `mediumtext` | `NULL` | A serialized array containing search results. |
 
 ### search_matches
@@ -244,14 +244,14 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
 | `id` | `int(10)` | `0` | The auto-incrementing primary key for this table. |
-| `_`word`_ | `varchar(20)` | `&rdquo;&rdquo;` | The word to be indexed. |
+| `_`word`_ | `varchar(20)` | `""` | The word to be indexed. |
 
 ### threads
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
 | _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
-| `commenter` | `varchar(200)` | `&rdquo;&rdquo;` | The username of the user who commented this thread. |
-| `subject` | `varchar(255)` | `&rdquo;&rdquo;` | The subject of the thread. |
+| `commenter` | `varchar(200)` | `""` | The username of the user who commented this thread. |
+| `subject` | `varchar(255)` | `""` | The subject of the thread. |
 | `commented` | `int(10)` | `0` | A UNIX timestamp representing the time this thread was commented. |
 | `first_comment_id` | `int(10)` | `0` | The ID of the first comment in this thread. |
 | `last_comment` | `int(10)` | `0` | A UNIX timestamp representing the time the last comment was made to this thread. |
@@ -277,9 +277,9 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | --- | --- | --- | --- |
 | _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
 | `group_id` | `int(10)` | `3` | The ID of the group to which this user belongs. The default is LUNA_MemBER. |
-| `username` | `varchar(200)` | `&rdquo;&rdquo;` | The users username. |
-| `password` | `varchar(40)` | `&rdquo;&rdquo;` | The users password hash. |
-| `email` | `varchar(80)` | `&rdquo;&rdquo;` | The users email address. |
+| `username` | `varchar(200)` | `""` | The users username. |
+| `password` | `varchar(40)` | `""` | The users password hash. |
+| `email` | `varchar(80)` | `""` | The users email address. |
 | `title` | `varchar(50)` | `NULL` | The user title. If this field is empty, the title from the user's usetgroup will be used. |
 | `realname` | `varchar(40)` | `NULL` | The real name of the user. |
 | `url` | `varchar(100)` | `NULL` | The website of the user. |
@@ -303,15 +303,15 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | `dst` | `tinyint(1)` | `0` | Is the user currently observing daylight saving time? |
 | `time_format` | `tinyint(1)` | `0` | The time format that the user uses. |
 | `date_format` | `tinyint(1)` | `0` | The date format that the user uses. |
-| `language` | `varchar(25)` | `&ldquo;English&rdquo;` | The language that should be used for this user. |
-| `style` | `varchar(25)` | `&ldquo;Luna&rdquo;` | The name of the style that should be used for this user. |
+| `language` | `varchar(25)` | `"English"` | The language that should be used for this user. |
+| `style` | `varchar(25)` | `"Luna"` | The name of the style that should be used for this user. |
 | `num_comments` | `int(10)` | `0` | The number of comments the user has made. Note: This is the number made, not the number that currently exist (i.e. when a comment is deleted this isn't decremented). |
 | `last_comment` | `int(10)` | `NULL` | A UNIX timestamp representing the time the user last made a comment. |
 | `last_search` | `int(10)` | `NULL` | A UNIX timestamp representing the time the user last performed a search. |
 | `last_email_sent` | `int(10)` | `NULL` | A UNIX timestamp representing the time the user last sent an email via the forums. |
 | `last_report_sent` | `int(10)` | `NULL` | A UNIX timestamp representing the time the user last sent a report via the forums. |
 | `registered` | `int(10)` | `0` | A UNIX timestamp representing the time the user registered. |
-| `registration_ip` | `varchar(39)` | `&ldquo;0.0.0.0&rdquo;` | The IP address used by the user when registering. |
+| `registration_ip` | `varchar(39)` | `"0.0.0.0"` | The IP address used by the user when registering. |
 | `last_visit` | `int(10)` | `0` | A UNIX timestamp representing the time of the users last visit. |
 | `admin_note` | `varchar(30)` | `NULL` | A note that the administrator has entered. |
 | `activate_string` | `varchar(80)` | `NULL` | A temporary storage string for new passwords and new e-mail addresses. |

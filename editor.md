@@ -1,7 +1,7 @@
 # Editor and BBCode
 Luna has a very simple editor to use its BBCode features. This editor shows and allows you to include most of the supported BBCodes into your comments, however, it also contains a couple of additional features.
 
-![Luna editor](/img/editor.png)
+![Luna editor](https://getluna.org/docs/img/editor.png)
 
 # Basic features
 From left to right, the upper toolbar has the following features:

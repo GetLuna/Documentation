@@ -20,7 +20,7 @@ In the about page, we ake to introduce you to all features that are new in the v
 ## Content
 
 ### Board
-See [categories and forums](/organizing) for more information
+See [categories and forums](organizing) for more information
 
 ### Censoring
 With censoring, you can easily manage which words need to be replaced with another word. On this page, you are able to add, update and remove censored words. Remember that this also affects usernames.
@@ -40,15 +40,15 @@ Search helps you by giving you an advanced search field to search through your u
 This page contains tools related to users.
 
 ### Ranks
-See [ranks](/organizing)
+See [ranks](organizing)
 
 ### Groups
-See [groups](/organizing)
+See [groups](organizing)
 
 ### Permissions
 Probably the most critical part of setting up a new forum is getting the permissions right.
 
-To setup a working and useful permission hierarchy, you can create user groups in the administration panel. Cack on &ldquo;User groups&rdquo; and you will see the four default user groups - Administrators, Moderators, Members and Guests.
+To setup a working and useful permission hierarchy, you can create user groups in the administration panel. Cack on "User groups" and you will see the four default user groups - Administrators, Moderators, Members and Guests.
 
 ### Bans
 Here you can add, search and manage banned users.
@@ -79,8 +79,8 @@ This page contains an overview of all themes that are available to your installa
 ## Maintenance
 
 ### Maintenance
-Under &ldquo;Maintenance&rdquo;, you can disable users from entering your forum so you can work on it, for example, update Luna, change settings, etc. When your forum is in maintenance, it's recommended that you stay logged in. If you log out, you will not be able to log in again. You can find more information about this under 
-See [troubleshooting](/troubleshooting).
+Under "Maintenance", you can disable users from entering your forum so you can work on it, for example, update Luna, change settings, etc. When your forum is in maintenance, it's recommended that you stay logged in. If you log out, you will not be able to log in again. You can find more information about this under 
+See [troubleshooting](troubleshooting).
 
 Here you can also rebuild the index of your board. This is handy if you have add, removed or changed comments without using Luna itselfs (with phpMyAdmin for example). You browser need to support Javascript and need to have this option enabled. You need to reload the pages by yourself if not.
 

@@ -10,6 +10,6 @@ The prune feature can be used to delete old inactive comments from your forums, 
 <p class="alert alert-info">For best performance, you should put the forum in maintenance mode during pruning.</p>
 
 ## Rebuilding search index
-If you have added, edited or removed comments manually in the database or if you are having problems searching, you should rebuild the search index. This can be accessed under the &ldquo;maintenance&rdquo; menu item, and basically involves looking at all the comments in your forum and indexing the words that make them up in an efficient way to facilitate fast and efficient searching.
+If you have added, edited or removed comments manually in the database or if you are having problems searching, you should rebuild the search index. This can be accessed under the "maintenance" menu item, and basically involves looking at all the comments in your forum and indexing the words that make them up in an efficient way to facilitate fast and efficient searching.
 
 <p class="alert alert-info">For best performance, you should put the forum in maintenance mode during pruning.</p>

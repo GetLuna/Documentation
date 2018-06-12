@@ -27,17 +27,17 @@ This page contains an overview of all themes that are available to your installa
 ### Permissions
 Probably the most critical part of setting up a new forum is getting the permissions right.
 
-To setup a working and useful permission hierarchy, you can create user groups in the administration panel. Click on &ldquo;User groups&rdquo; and you will see the four default user groups - Administrators, Moderators, Members and Guests.
+To setup a working and useful permission hierarchy, you can create user groups in the administration panel. Click on "User groups" and you will see the four default user groups - Administrators, Moderators, Members and Guests.
 
 ### Ranks
-See [ranks](/organizing)
+See [ranks](organizing)
 
 ### User groups
-See [groups](/organizing)
+See [groups](organizing)
 
 ## Content
 ### Board
-See [categories and forums](/organizing)
+See [categories and forums](organizing)
 
 ### Censoring
 With censoring, you can easily manage which words need to be replaced with another word. On this page, you are able to add, update and remove censored words. Remember that this also affects usernames.

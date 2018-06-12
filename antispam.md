@@ -1,7 +1,7 @@
 # Fighting Spam
 
 ## Introduction
-[Forum spam](https://en.wikipedia.org/wiki/Forum_spam) is a problem common to all popular forum software. Forum spam is caused by automated software (referred to as &ldquo;spambots&rdquo;) that visits forums with the sole purpose of registering many user accounts and/or commenting massive amounts of messages. These messages often contain links to commercial websites, [Phishing](https://en.wikipedia.org/wiki/Phishing) websites or even malware.
+[Forum spam](https://en.wikipedia.org/wiki/Forum_spam) is a problem common to all popular forum software. Forum spam is caused by automated software (referred to as "spambots") that visits forums with the sole purpose of registering many user accounts and/or commenting massive amounts of messages. These messages often contain links to commercial websites, [Phishing](https://en.wikipedia.org/wiki/Phishing) websites or even malware.
 
 There are two ways in which spammers will try to promote their website through your Luna forum:
 

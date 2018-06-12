@@ -193,7 +193,7 @@ Unset any variables created as a result of register_globals.
 Removes any characters that can cause undesired result or are invisible from text.
 
 ### `remove_bad_characters($array)`
-Removes &ldquo;bad&rdquo; characters from the array.
+Removes "bad" characters from the array.
 
 ### `file_size($size)`
 Converts a file size in bytes into a more human version (e.g. 1024 B changed into 1 KiB).

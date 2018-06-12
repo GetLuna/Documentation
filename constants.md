@@ -103,7 +103,7 @@ define('LUNA_CACHE_DIR', '/tmp/luna_cache/');
 ```
 
 ### `LUNA_NO_SET_NAMES`
-Defining `LUNA_NO_SET_NAMES` will instruct the [database layer](/dblayer) to not set the connection character set to UTF-8.
+Defining `LUNA_NO_SET_NAMES` will instruct the [database layer](dblayer) to not set the connection character set to UTF-8.
 
 ```php
 define('LUNA_NO_SET_NAMES', 1);

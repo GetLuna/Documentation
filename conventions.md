@@ -28,7 +28,7 @@ else
 }
 ```
 
-Note the whitespace between the keyword and the parenthesis. One allowed exception from the standard Allman style is &ldquo;braceless&rdquo; blocks. The use of braceless blocks is actually encouraged.
+Note the whitespace between the keyword and the parenthesis. One allowed exception from the standard Allman style is "braceless" blocks. The use of braceless blocks is actually encouraged.
 
 For example:
 
@@ -46,7 +46,7 @@ All line breaks should be LF `(n)` only. Set your editor to save files with UNIX
 ## PHP-specific
 The following rules apply only to PHP.
 
-* Use singlequotes as opposed to doublequotes when working with strings. E.g. `$str = 'Users: '.$num_users;` as opposed to `$str = &ldquo;Users: $num_users&rdquo;;`.
+* Use singlequotes as opposed to doublequotes when working with strings. E.g. `$str = 'Users: '.$num_users;` as opposed to `$str = "Users: $num_users";`.
 * Leave one line of whitespace above and below each block of markup, provided the block constitutes multiple lines of markup. I.e. one empty line above each `?&gt;` and below each `&lt;?php`. The exception to this is when there is only one line of code, in which case the entire section of code should be on one line.
 * Don't use PHP's short tags (`&lt;?`, `&lt;?=`), but use its full equivalent (`&lt;?php`, `&lt;?php echo`).
 

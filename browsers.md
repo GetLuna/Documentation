@@ -1,5 +1,5 @@
 # Browser support
-## Luna provides support for all major browsers and operating systems.
+Luna provides support for all major browsers and operating systems.
 
 ## Luna vNext
 <table class="table table-hover table-striped">

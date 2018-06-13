@@ -45,4 +45,27 @@
 			</div>
 		</div>
 	</a>
+	<hr />
+	<a href="../releases" class="btn btn-light btn-docs btn-block">
+		<div class="row">
+			<div class="col-11">
+				<h2><i class="fal fa-fw fa-map-signs"></i> Release notes</h2>
+				<p>See what's new</p>
+			</div>
+			<div class="col-1 col-arrow">
+				<i class="fal fa-fw fa-arrow-right"></i>
+			</div>
+		</div>
+	</a>
+	<a href="https://github.com/GetLuna/Luna/issues/new" class="btn btn-light btn-docs btn-block">
+		<div class="row">
+			<div class="col-11">
+				<h2><i class="fal fa-fw fa-bug"></i> Report a bug</h2>
+				<p>Found a bug? Report it on GitHub!</p>
+			</div>
+			<div class="col-1 col-arrow">
+				<i class="fal fa-fw fa-arrow-right"></i>
+			</div>
+		</div>
+	</a>
 </div>

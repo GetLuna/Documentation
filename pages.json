@@ -1,0 +1,156 @@
+[
+    {
+        "id": "index",
+        "index": "index",
+        "categories": [
+            {
+                "title": "Documentation",
+                "icon": "fal fa-fw fa-book",
+                "pages" : [
+                    { "id": "index_use",            "title": "Use Luna" },
+                    { "id": "index_for",            "title": "Develop for Luna" },
+                    { "id": "index_develop",        "title": "Develop Luna" },
+                    { "id": "index_design",         "title": "Design guidelines" }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "use",
+        "index": "index_use",
+        "categories": [
+            { 
+                "title": "Get started",
+                "icon": "fal fa-fw fa-moon",
+                "pages" : [
+                    { "id": "install",              "title": "Installation" },
+                    { "id": "setup",                "title": "Setting up your board" },
+                    { "id": "upgrading",            "title": "Updating" }
+                ]
+            }, {
+                "title": "Develop",
+                "icon": "fal fa-fw fa-wrench",
+                "pages" : [
+                    { "id": "troubleshooting",      "title": "Troubleshooting" }
+                ]
+            }, {
+                "title": "Mainstage",
+                "icon": "fal fa-fw fa-home",
+                "pages" : [
+                    { "id": "ediotr",               "title": "Editor & BBCode" },
+                    { "id": "labels",               "title": "Thread labels" }
+                ]
+            }, {
+                "title": "Backstage",
+                "icon": "fal fa-fw fa-tachometer-alt",
+                "pages" : [
+                    { "id": "backstage",            "title": "Backstage" },
+                    { "id": "organizing",           "title": "Organizing" },
+                    { "id": "admin",                "title": "Administration" },
+                    { "id": "antispam",             "title": "Fighting spam" }
+                ]
+            }, {
+                "title": "Customize",
+                "icon": "fal fa-fw fa-paint-brush",
+                "pages" : [
+                    { "id": "fontawesome",          "title": "Font Awesome" },
+                    { "id": "customizing",          "title": "Customizing" }
+                ]
+            }, {
+                "title": "General",
+                "icon": "fal fa-fw fa-info-circle",
+                "pages" : [
+                    { "id": "cookies",              "title": "Cookies" },
+                    { "id": "data",                 "title": "Data collection" }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "for",
+        "index": "index_for",
+        "categories": [
+            { 
+                "title": "Customize",
+                "icon": "fal fa-fw fa-paint-brush",
+                "pages" : [
+                    { "id": "themes",               "title": "Themes" },
+                    { "id": "plugins",              "title": "Plugins" },
+                    { "id": "translations",         "title": "Language packs" }
+                ]
+            }, {
+                "title": "Develop",
+                "icon": "fal fa-fw fa-wrench",
+                "pages" : [
+                    { "id": "troubleshooting",      "title": "Troubleshooting" }
+                ]
+            }, {
+                "title": "References",
+                "icon": "fal fa-fw fa-bookmark",
+                "pages" : [
+                    { "id": "constats",             "title": "Constants" },
+                    { "id": "dbstructure",          "title": "Database structure" },
+                    { "id": "dblayer",              "title": "Database layer" },
+                    { "id": "variables",            "title": "Global variables" },
+                    { "id": "functions",            "title": "Functions" },
+                    { "id": "caching",              "title": "Caching" }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "develop",
+        "index": "index_develop",
+        "categories": [
+            {
+                "title": "Develop",
+                "icon": "fal fa-fw fa-wrench",
+                "pages" : [
+                    { "id": "php_conventions",      "title": "PHP coding conventions" },
+                    { "id": "css_conventions",      "title": "CSS coding conventions" },
+                    { "id": "troubleshooting",      "title": "Troubleshooting" }
+                ]
+            }, {
+                "title": "References",
+                "icon": "fal fa-fw fa-bookmark",
+                "pages" : [
+                    { "id": "constats",             "title": "Constants" },
+                    { "id": "dbstructure",          "title": "Database structure" },
+                    { "id": "dblayer",              "title": "Database layer" },
+                    { "id": "variables",            "title": "Global variables" },
+                    { "id": "functions",            "title": "Functions" },
+                    { "id": "caching",              "title": "Caching" }
+                ]
+            }, {
+                "title": "Contributing",
+                "icon": "fab fa-fw fa-github",
+                "pages" : [
+                    { "id": "contributing",         "title": "Contributing" },
+                    { "id": "branches",             "title": "Branches" },
+                    { "id": "tickets",              "title": "Tickets" }
+                ]
+            }, {
+                "title": "General",
+                "icon": "fal fa-fw fa-info-circle",
+                "pages" : [
+                    { "id": "browsers",             "title": "Browser support" },
+                    { "id": "version",              "title": "Versioning" }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "design",
+        "index": "index_design",
+        "categories": [
+            {
+                "title": "Brand",
+                "icon": "fal fa-fw fa-moon",
+                "pages" : [
+                    { "id": "identity",             "title": "Identity" },
+                    { "id": "colors",               "title": "Colors" }
+                ]
+            }
+        ]
+    }
+]

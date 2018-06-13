@@ -28,12 +28,6 @@
                     { "id": "upgrading",            "title": "Updating" }
                 ]
             }, {
-                "title": "Develop",
-                "icon": "fal fa-fw fa-wrench",
-                "pages" : [
-                    { "id": "troubleshooting",      "title": "Troubleshooting" }
-                ]
-            }, {
                 "title": "Mainstage",
                 "icon": "fal fa-fw fa-home",
                 "pages" : [
@@ -55,6 +49,12 @@
                 "pages" : [
                     { "id": "fontawesome",          "title": "Font Awesome" },
                     { "id": "customizing",          "title": "Customizing" }
+                ]
+            }, {
+                "title": "Develop",
+                "icon": "fal fa-fw fa-wrench",
+                "pages" : [
+                    { "id": "troubleshooting",      "title": "Troubleshooting" }
                 ]
             }, {
                 "title": "General",

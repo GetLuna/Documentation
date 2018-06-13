@@ -7,11 +7,11 @@ Luna has a very simple editor to use its BBCode features. This editor shows and 
 From left to right, the upper toolbar has the following features:
 
 * Pin the thread to its forum, this will make the thread stay on the top of the list, only available for admins and moderators with the required permissions when creating a new thread and editing the opening comment.
-* Edit the comment without adding/updating the &quot;Last edited by&quot; line. Only available for admins and moderators witht he required permissions when editing a comment.
+* Edit the comment without adding/updating the "Last edited by" line. Only available for admins and moderators witht he required permissions when editing a comment.
 * `[b][/b]` Bold text.
 * `[u][/u]` Underline text.
 * `[i][/i]` Italic text.
-* `[s][/s]` &quot;Delete&quot; text, strike-through.
+* `[s][/s]` "Delete" text, strike-through.
 * `[h][/h]` Heading text.
 * `[sub][/sub]` Text in subscript.
 * `[sup][/sup]` Text in superscript.

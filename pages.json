@@ -9,7 +9,7 @@
                 "pages" : [
                     { "id": "index_use",            "title": "Use Luna" },
                     { "id": "index_for",            "title": "Develop for Luna" },
-                    { "id": "index_develop",        "title": "Develop Luna" },
+                    { "id": "index_develop_for",    "title": "Develop Luna" },
                     { "id": "index_design",         "title": "Design guidelines" }
                 ]
             }
@@ -37,7 +37,7 @@
                 "title": "Mainstage",
                 "icon": "fal fa-fw fa-home",
                 "pages" : [
-                    { "id": "ediotr",               "title": "Editor & BBCode" },
+                    { "id": "editor",               "title": "Editor & BBCode" },
                     { "id": "labels",               "title": "Thread labels" }
                 ]
             }, {
@@ -68,7 +68,7 @@
     },
     {
         "id": "for",
-        "index": "index_for",
+        "index": "index_develop_for",
         "categories": [
             { 
                 "title": "Customize",
@@ -77,12 +77,6 @@
                     { "id": "themes",               "title": "Themes" },
                     { "id": "plugins",              "title": "Plugins" },
                     { "id": "translations",         "title": "Language packs" }
-                ]
-            }, {
-                "title": "Develop",
-                "icon": "fal fa-fw fa-wrench",
-                "pages" : [
-                    { "id": "troubleshooting",      "title": "Troubleshooting" }
                 ]
             }, {
                 "title": "References",
@@ -107,19 +101,7 @@
                 "icon": "fal fa-fw fa-wrench",
                 "pages" : [
                     { "id": "php_conventions",      "title": "PHP coding conventions" },
-                    { "id": "css_conventions",      "title": "CSS coding conventions" },
-                    { "id": "troubleshooting",      "title": "Troubleshooting" }
-                ]
-            }, {
-                "title": "References",
-                "icon": "fal fa-fw fa-bookmark",
-                "pages" : [
-                    { "id": "constats",             "title": "Constants" },
-                    { "id": "dbstructure",          "title": "Database structure" },
-                    { "id": "dblayer",              "title": "Database layer" },
-                    { "id": "variables",            "title": "Global variables" },
-                    { "id": "functions",            "title": "Functions" },
-                    { "id": "caching",              "title": "Caching" }
+                    { "id": "css_conventions",      "title": "CSS coding conventions" }
                 ]
             }, {
                 "title": "Contributing",

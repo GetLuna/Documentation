@@ -1,7 +1,7 @@
 # CSS coding conventions
 <div class="alert alert-info">These coding conventions apply for Luna 2.0 and higher versions.</div>
 
-The rules and recommendations set forth in this section apply to CSS and any other CSS-based programming language (where applicable) in use by Luna. Please note that tabs in this document have been substituted by spaces for visual reasons only.
+The rules and recommendations set forth in this section apply to CSS and SCSS in use by Luna.
 
 ## Naming convention
 The naming rules apply to the naming of ids and classes.
@@ -14,14 +14,14 @@ The naming rules apply to the naming of ids and classes.
 * Use `.js-*` classes to denote behavior (as opposed to style), but keep these classes out of your CSS.
 
 ## Brace policy and indentation
-Braces are placed behind the last selector to which the declaration applies. Each selector and property has its own rule. All indentation should be made using tabs (with a tab size of 4), not spaces.
+Braces are placed behind the last selector to which the declaration applies. Each selector and property has its own rule. All indentation should be made using 4 spaces, not tabs.
 
 Here's an example:
 
 ```css
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
-	color: #fff;
+        color: #fff;
 }
 ```
 
@@ -48,20 +48,20 @@ All line breaks should be CR LF Windows only. Set your editor to save files with
 ```css
 /* The bad way */
 .selector, .selector-secondary, .selector[type=text] {
-  padding:15px;
-  margin:0px 0px 15px;
-  background-color:rgba(0, 0, 0, 0.5);
-  box-shadow:0px 1px 2px #CCC,inset 0 1px 0 #FFFFFF
+    padding:15px;
+    margin:0px 0px 15px;
+    background-color:rgba(0, 0, 0, 0.5);
+    box-shadow:0px 1px 2px #CCC,inset 0 1px 0 #FFFFFF
 }
 
 /* The good way */
 .selector,
 .selector-secondary,
 .selector[type="text"] {
-	padding: 15px;
-	margin-bottom: 15px;
-	background-color: rgba(0,0,0,.5);
-	box-shadow: 0px 1px 2px #ccc, inset 0 1px 0 #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(0,0,0,.5);
+    box-shadow: 0px 1px 2px #ccc, inset 0 1px 0 #fff;
 }
 ```
 
@@ -75,27 +75,52 @@ Related property declarations should be grouped together following the order:
 * Misc (`opacity`)
 
 ## Media query usage
-Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future. Here's a typical setup.
+Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future.
 
+Media queries that only alter one specific class that already has non-queried properties should be put in that class and not repeat the class. These queries should only contain properties. If the class only contains properties that apply to a media query, the class itself should also be listed within the query.
+
+If a media query manipulates multiple classes, it should wrap around all of them and its parent if it does not manipulate any other properties for style.
+
+```scss
+.tab-content .form-group {
+    .col-sm-3 {
+        padding-left: 0;
+        
+        @media (max-width:767px) {
+            padding-right: 0;
+        }
+    }
+
+    @media (min-width:768px) {
+        .col-sm-6 {
+            &:first-child {
+                padding-left: 15px;
+            }
+            
+            &:last-child {
+                padding-right: 15px;
+            }
+        }
+    }
+}
+```
 
 ## Prefixed properties
-When using vendor prefixed properties, indent each property such that the declaration's value lines up vertically for easy multi-line editing. However, don't use prefixes when they aren't necessary for the functionality. If a radius, gradient or shadow isn't displayed by one of the browsers, than that's "to bad".
+Prefixes is not something to worry about in SCSS. Any tool set up to compile the SCSS should have auto-prefixing enabled.
 
 ```css
 /* The bad way */
 .selector {
-	-webkit-border-raius: 5px;
-	border-radius: 5px;
-	box-shadow: 0 1px 2px rgba(0,0,0,.15);
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    -webkit-border-raius: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 
 /* The good way */
 .selector {
-	-webkit-border-raius: 5px;
-		border-radius: 5px;
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-		box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 ```
 
@@ -108,6 +133,7 @@ Strive to limit use of shorthand declarations to instances where you must explic
 * `background`
 * `border`
 * `border-radius`
+
 Often times we don't need to set all the values a shorthand property represents. For example, HTML headings only set top and bottom margin, so when necessary, only override those two values. Excessive use of shorthand properties often leads to sloppier code with unnecessary overrides and unintended side effects.
 
 The Mozilla Developer Network has a great article on [shorthand properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) for those unfamiliar with notation and behavior.
@@ -115,18 +141,34 @@ The Mozilla Developer Network has a great article on [shorthand properties](http
 ```css
 /* The bad way */
 .selector {
-  margin: 0 0 10px;
-  background: red;
-  background: url("image.jpg");
-  border-radius: 3px 3px 0 0;
+    margin: 0 0 10px;
+    background: red;
+    background: url("image.jpg");
+    border-radius: 3px 3px 0 0;
 }
 
 /* The good way */
 .selector {
-  margin-bottom: 10px;
-  background-color: red;
-  background-image: url("image.jpg");
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+    margin-bottom: 10px;
+    background-color: red;
+    background-image: url("image.jpg");
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+```
+
+However, do not take this as a rule to never use shorthand notations. If what yo uwant to write can be written in a simpeler way by using the shorthand notation, use it.
+
+```css
+/* The bad way */
+.selector {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000;
+}
+
+/* The good way */
+.selector {
+    border: 1px solid #000;
 }
 ```

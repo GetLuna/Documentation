@@ -8,7 +8,7 @@
                 "icon": "fal fa-fw fa-book",
                 "pages" : [
                     { "id": "index_use",            "title": "Use Luna" },
-                    { "id": "index_for",            "title": "Develop for Luna" },
+                    { "id": "index_develop",        "title": "Develop for Luna" },
                     { "id": "index_develop_for",    "title": "Develop Luna" },
                     { "id": "index_design",         "title": "Design guidelines" }
                 ]
@@ -16,45 +16,79 @@
         ]
     },
     {
-        "id": "use",
-        "index": "index_use",
+        "id": "manage",
+        "index": "install",
         "categories": [
             { 
                 "title": "Get started",
                 "icon": "fal fa-fw fa-moon",
                 "pages" : [
                     { "id": "install",              "title": "Installation" },
-                    { "id": "setup",                "title": "Setting up your board" },
-                    { "id": "upgrading",            "title": "Updating" }
-                ]
-            }, {
-                "title": "Mainstage",
-                "icon": "fal fa-fw fa-home",
-                "pages" : [
-                    { "id": "editor",               "title": "Editor & BBCode" },
-                    { "id": "labels",               "title": "Thread labels" }
+                    { "id": "first",                "title": "First steps" }
                 ]
             }, {
                 "title": "Backstage",
                 "icon": "fal fa-fw fa-tachometer-alt",
                 "pages" : [
                     { "id": "backstage",            "title": "Backstage" },
-                    { "id": "organizing",           "title": "Organizing" },
+                    { "id": "update",               "title": "Update & about" }
+                ]
+            }, {
+                "title": "Content",
+                "icon": "fal fa-fw fa-file",
+                "pages" : [
+                    { "id": "categories",           "title": "Categories" },
+                    { "id": "forums",               "title": "Forums" },
+                    { "id": "censoring",            "title": "Censoring" }
+                ]
+            }, {
+                "title": "Users",
+                "icon": "fal fa-fw fa-users",
+                "pages" : [
+                    { "id": "ranks",                "title": "Ranks" },
+                    { "id": "groups",               "title": "Groups" },
+                    { "id": "bans",                 "title": "Bans" },
                     { "id": "admin",                "title": "Administration" },
                     { "id": "antispam",             "title": "Fighting spam" }
                 ]
             }, {
-                "title": "Customize",
-                "icon": "fal fa-fw fa-paint-brush",
+                "title": "Settings",
+                "icon": "fal fa-fw fa-cogs",
                 "pages" : [
-                    { "id": "fontawesome",          "title": "Font Awesome" },
-                    { "id": "customizing",          "title": "Customizing" }
+                    { "id": "settings",             "title": "Settings" },
+                    { "id": "features",             "title": "Features" },
+                    { "id": "theme",                "title": "Theme" },
+                    { "id": "menu",                 "title": "Menu" }
                 ]
             }, {
-                "title": "Develop",
-                "icon": "fal fa-fw fa-wrench",
+                "title": "Maintenance",
+                "icon": "fal fa-fw fa-coffee",
                 "pages" : [
+                    { "id": "maintenance",          "title": "Maintenance" },
+                    { "id": "prune",                "title": "Prune" }
+                ]
+            }, {
+                "title": "Extra's",
+                "icon": "fal fa-fw fa-plus",
+                "pages" : [
+                    { "id": "fontawesome",          "title": "Font Awesome" },
+                    { "id": "antispam",             "title": "Fighting spam" },
+                    { "id": "customizing",          "title": "Customizing" },
                     { "id": "troubleshooting",      "title": "Troubleshooting" }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "use",
+        "index": "editor",
+        "categories": [
+            {
+                "title": "Mainstage",
+                "icon": "fal fa-fw fa-home",
+                "pages" : [
+                    { "id": "editor",               "title": "Editor & BBCode" },
+                    { "id": "labels",               "title": "Thread labels" }
                 ]
             }, {
                 "title": "General",

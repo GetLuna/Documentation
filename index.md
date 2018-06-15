@@ -1,11 +1,22 @@
 # What do you want to do today?
 
-<div>
-	<a href="index_use" class="btn btn-light btn-docs btn-block">
+<div class="option-group">
+	<a href="install" class="btn btn-light btn-docs btn-block">
+		<div class="row">
+			<div class="col-11">
+				<h2><i class="fal fa-fw fa-tachometer-alt"></i> Manage Luna</h2>
+				<p>Install, updated and manage your board</p>
+			</div>
+			<div class="col-1 col-arrow">
+				<i class="fal fa-fw fa-arrow-right"></i>
+			</div>
+		</div>
+	</a>
+	<a href="editor" class="btn btn-light btn-docs btn-block">
 		<div class="row">
 			<div class="col-11">
 				<h2><i class="fal fa-fw fa-moon"></i> Use Luna</h2>
-				<p>A basic guide to using Luna</p>
+				<p>All about the front-end</p>
 			</div>
 			<div class="col-1 col-arrow">
 				<i class="fal fa-fw fa-arrow-right"></i>
@@ -57,11 +68,24 @@
 			</div>
 		</div>
 	</a>
-	<a href="https://github.com/GetLuna/Luna/issues/new" class="btn btn-light btn-docs btn-block">
+	<a href="https://github.com/GetLuna/Luna/issues/new?template=bug_report.md
+" class="btn btn-light btn-docs btn-block">
 		<div class="row">
 			<div class="col-11">
 				<h2><i class="fal fa-fw fa-bug"></i> Report a bug</h2>
 				<p>Found a bug? Report it on GitHub!</p>
+			</div>
+			<div class="col-1 col-arrow">
+				<i class="fal fa-fw fa-arrow-right"></i>
+			</div>
+		</div>
+	</a>
+	<a href="https://github.com/GetLuna/Luna/issues/new?template=feature_request.md
+" class="btn btn-light btn-docs btn-block">
+		<div class="row">
+			<div class="col-11">
+				<h2><i class="fal fa-fw fa-box-open"></i> Request a feature</h2>
+				<p>Woud you like to see something enw? Request it on GitHub!</p>
 			</div>
 			<div class="col-1 col-arrow">
 				<i class="fal fa-fw fa-arrow-right"></i>

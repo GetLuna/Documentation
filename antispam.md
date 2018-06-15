@@ -26,6 +26,3 @@ Many spambots are able to fill out forms, making it fairly easy to create new ac
 * Check the option 'Verify registrations'
 
 You can easly remove unverified accounts through the prune options under 'Maintenance'.
-
-### Enable questions
-Another option we strongly recommend you to customize are the questions Luna will ask when registrating a new user. By default, Luna provides a limit set of questions that will be asked at random while creating a new account, but it is always safer to also include your own questions.

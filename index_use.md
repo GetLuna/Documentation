@@ -4,7 +4,7 @@
         <div class="list-group">
             <h5 class="list-group-header"><i class="fal fa-fw fa-moon"></i> Get started</h5>
             <a class="list-group-item" href="install">Installation</a>
-            <a class="list-group-item" href="setup">Setting up your board</a>
+            <a class="list-group-item" href="first">First steps</a>
             <a class="list-group-item" href="upgrading">Updating</a>
             <h5 class="list-group-header"><i class="fal fa-fw fa-wrench"></i> Develop</h5>
             <a class="list-group-item" href="troubleshooting">Troubleshooting</a>
@@ -16,8 +16,10 @@
             <a class="list-group-item" href="editor">Editor and BBCode</a>
             <a class="list-group-item" href="labels">Thread labels</a>
             <h5 class="list-group-header"><i class="fal fa-fw fa-tachometer-alt"></i> Backstage</h5>
-            <a class="list-group-item" href="backstage">Using Backstage</a>
-            <a class="list-group-item" href="organizing">Organizing</a>
+            <a class="list-group-item" href="backstage">Backstage</a>
+            <a class="list-group-item" href="categories">Categories</a>
+            <a class="list-group-item" href="forums">Forums</a>
+            <a class="list-group-item" href="ranks">Ranks</a>
             <a class="list-group-item" href="admin">Administration</a>
             <a class="list-group-item" href="antispam">Fighting Spam</a>
         </div>

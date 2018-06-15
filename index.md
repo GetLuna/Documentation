@@ -26,7 +26,7 @@
 	<a href="index_develop_for" class="btn btn-light btn-docs btn-block">
 		<div class="row">
 			<div class="col-11">
-				<h2><i class="fal fa-fw fa-box-heart"></i> Develop for Luna</h2>
+				<h2><i class="fal fa-fw fa-puzzle-piece"></i> Develop for Luna</h2>
 				<p>How to build extentions, translations and themes</p>
 			</div>
 			<div class="col-1 col-arrow">
@@ -37,7 +37,7 @@
 	<a href="index_develop" class="btn btn-light btn-docs btn-block">
 		<div class="row">
 			<div class="col-11">
-				<h2><i class="fal fa-fw fa-wrench"></i> Develop Luna</h2>
+				<h2><i class="fal fa-fw fa-code"></i> Develop Luna</h2>
 				<p>How to help us develop Luna</p>
 			</div>
 			<div class="col-1 col-arrow">
@@ -84,7 +84,7 @@
 " class="btn btn-light btn-docs btn-block">
 		<div class="row">
 			<div class="col-11">
-				<h2><i class="fal fa-fw fa-box-open"></i> Request a feature</h2>
+				<h2><i class="fal fa-fw fa-box-heart"></i> Request a feature</h2>
 				<p>Woud you like to see something enw? Request it on GitHub!</p>
 			</div>
 			<div class="col-1 col-arrow">

@@ -53,3 +53,8 @@ The easiest option is to simply overwrite the old files with the new ones. While
 If you have applied any modification, it's recommended to apply these modifications to the new version before updating, however, it's important to stay up-to-date with the latest version for obvious reasons.
 
 If you have made a number of modifications to Luna, it might be useful to fork the original repository on GitHub, make your changes in that fork and then pull newer versions of Luna whenever they are released. Git might be able to take care of some of your changes itself.
+
+## About
+The about page contains the changelog for the current version of Luna you are using. When a patch is released and you update to it, the changes included in that patch will be listed here as well.
+
+During preview reelases, the release notes of the then-current version of Luna will be included as well as a changelog for each preview update. When the preview ends and a new major or minor version of Luna is ready, the changelog for the preview updates get condenced into one single log and the changelog for the previous version is dropped.

@@ -8,7 +8,7 @@ To load cached data, all you have to do is including the cache file (if it exist
 ```php
 // Load cached configuration
 if (file_exists(LUNA_CACHE_DIR.'cache_config.php'))
-include LUNA_CACHE_DIR.'cache_config.php';
+    include LUNA_CACHE_DIR.'cache_config.php';
 ```
 
 If the file does not exist, the cache has to be regenerated first.
@@ -18,7 +18,7 @@ In order to not show old data on the forum, you need to make sure that the cache
 
 ```php
 if (!defined('LUNA_CACHE_FUNCTIONS_LOADED'))
-require luna_ROOT.'include/cache.php';
+    require luna_ROOT.'include/cache.php';
 
 // Regenerate the config cache
 generate_config_cache();

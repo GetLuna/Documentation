@@ -4,12 +4,23 @@
         "index": "index",
         "categories": [
             {
-                "title": "Documentation",
-                "icon": "fal fa-fw fa-book",
+                "title": "Use",
+                "icon": "fal fa-fw fa-mouse-pointer",
                 "pages" : [
-                    { "id": "index_use",            "title": "Use Luna" },
-                    { "id": "index_develop",        "title": "Develop for Luna" },
-                    { "id": "index_develop_for",    "title": "Develop Luna" },
+                    { "id": "editor",               "title": "Use Luna" },
+                    { "id": "install",              "title": "Manage Luna" }
+                ]
+            }, {
+                "title": "Developers",
+                "icon": "fal fa-fw fa-code",
+                "pages" : [
+                    { "id": "index_develop_for",    "title": "Develop for Luna" },
+                    { "id": "index_develop",        "title": "Develop Luna" }
+                ]
+            }, {
+                "title": "Brand",
+                "icon": "fal fa-fw fa-object-ungroup",
+                "pages" : [
                     { "id": "index_design",         "title": "Design guidelines" }
                 ]
             }
@@ -39,6 +50,7 @@
                 "pages" : [
                     { "id": "categories",           "title": "Categories" },
                     { "id": "forums",               "title": "Forums" },
+                    { "id": "reports",              "title": "Reports" },
                     { "id": "censoring",            "title": "Censoring" }
                 ]
             }, {
@@ -47,9 +59,7 @@
                 "pages" : [
                     { "id": "ranks",                "title": "Ranks" },
                     { "id": "groups",               "title": "Groups" },
-                    { "id": "bans",                 "title": "Bans" },
-                    { "id": "admin",                "title": "Administration" },
-                    { "id": "antispam",             "title": "Fighting spam" }
+                    { "id": "bans",                 "title": "Bans" }
                 ]
             }, {
                 "title": "Settings",
@@ -134,8 +144,8 @@
                 "title": "Develop",
                 "icon": "fal fa-fw fa-wrench",
                 "pages" : [
-                    { "id": "php_conventions",      "title": "PHP coding conventions" },
-                    { "id": "css_conventions",      "title": "CSS coding conventions" }
+                    { "id": "conventions",          "title": "Coding conventions" },
+                    { "id": "css_conventions",      "title": "(S)CSS coding conventions" }
                 ]
             }, {
                 "title": "Contributing",

@@ -5,7 +5,7 @@ Unlike the old ModernBB Style Engine (version 5.2 and prior), the Luna Theme Eng
 This is a list of files that are required to be in your theme, grouped to show you which files are required for which type of theme.
 
 ### Required for parent and child themes
-* `information.php`
+* `theme.json`
 * `style.css`
 
 ### Required for parent theme, optional for child theme
@@ -51,38 +51,32 @@ This is a list of files that are required to be in your theme, grouped to show y
 * `theme_settings.php`
 * Any other file you can think of
 
-## information.php
-The `information.php`-file contains basic information about your theme that is used on the Backstage's Theme-page. The content of the file should look like the example below. This example is from the Sunrise child theme based on Fifteen.
+## theme.json
+The `theme.json`-file contains basic information about your theme that is used on the Backstage's Theme-page. The content of the file should look like the example below. This example is from the Sunrise child theme based on Fifteen. Note that prior to version 2.1, the `information.php`-file was used for this, themes still using this file without a `theme.json` file won't work in Luna 2.1 and higher.
 
-```php
-<?php
-$xmlstr = <<<XML
-<?xml version="1.0" encoding="utf-8">
-<!DOCTYPE extension SYSTEM "ext-1.0.dtd">
-
-<!--
-/*
-* Copyright (C) 2014-2018 Studio 384
-* Licensed under MIT
-*/
--->
-
-<style engine="1.0">
-<id>sunrise</id>
-<name>Sunrise</name>
-<developer>Studio 384</developer>
-<date>15 October 2015</date>
-<version>1.2.0</version>
-<minversion>1.2.0</minversion>
-<maxversion>1.2.0</maxversion>
-<description>Sunset is a variant upon Fifteen, featuring a more classic design.</description>
-<parent_theme>Fifteen</parent_theme>
-</style>
-XML;
->
+```json
+{
+    "id": "sunrise",
+    "name": "Sunrise",
+	"developer": "Studio 384",
+	"description": "Sunset is a variant upon Fifteen, featuring a more classic design.",
+    "date": "14 June 2018",
+    "version": "3.1-alpha.2",
+    "minversion": "2.0.0",
+    "maxversion": "3.1-alpha.2",
+    "parent": "fifteen"
+}
 ```
 
-The only optional parameter in this file is `<parent_theme>` and is only used to identify the theme's parent to inherit all the files from that theme.
+* __id__: the id of the theme, this has to be unique. While it is unlikely that 2 themes with the same ID will be on the same installation, it is perhaps best adviced to use the name of the theme in lowercase followed by a random string.
+* __name__: the name of the theme.
+* __developer__: the person, people or organization that developed the theme.
+* __description__: a short description of what the theme has to offer.
+* __date__: the date of release of the current version.
+* __version__: the version of the theme.
+* __minversion__: the minimum required version of Luna that this theme can run on.
+* __maxversion__: the maximum required version of Luna that this theme can run on.
+* __parent__: optional field to indicate that the theme is a child theme and what its parent is. Files that are required but are not present in the theme will be searched for in the team listed here.
 
 ## theme_settings.php
 The `theme_settings.php`-file will show theme settings on the Backstage's Themes-page. You can use this to show theme specific settings or instructions. You can do with it whatever you like.

@@ -4,8 +4,8 @@
 	<a href="install" class="btn btn-light btn-docs btn-block">
 		<div class="row">
 			<div class="col-11">
-				<h2><i class="fal fa-fw fa-tachometer-alt"></i> Manage Luna</h2>
-				<p>Install, updated and manage your board</p>
+				<h2><i class="fal fa-fw fa-tachometer-alt"></i> Install &amp; Backstage</h2>
+				<p>Install, update and manage your board</p>
 			</div>
 			<div class="col-1 col-arrow">
 				<i class="fal fa-fw fa-arrow-right"></i>
@@ -15,7 +15,7 @@
 	<a href="editor" class="btn btn-light btn-docs btn-block">
 		<div class="row">
 			<div class="col-11">
-				<h2><i class="fal fa-fw fa-moon"></i> Use Luna</h2>
+				<h2><i class="fal fa-fw fa-moon"></i> Mainstage</h2>
 				<p>All about the front-end</p>
 			</div>
 			<div class="col-1 col-arrow">

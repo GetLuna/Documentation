@@ -7,8 +7,8 @@
                 "title": "Use",
                 "icon": "fal fa-fw fa-mouse-pointer",
                 "pages" : [
-                    { "id": "editor",               "title": "Use Luna" },
-                    { "id": "install",              "title": "Manage Luna" }
+                    { "id": "install",              "title": "Install & Backstage" },
+                    { "id": "editor",               "title": "Mainstage" }
                 ]
             }, {
                 "title": "Developers",

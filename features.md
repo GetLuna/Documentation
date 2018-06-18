@@ -29,7 +29,6 @@
 * __Spoiler__: allow users to use the `[spoiler]`-tag to hide content behind a collapsable panel in their comments.
 * __Signature emojis__: automatically convert emojis to a graphical image.
 * __Signature img__: allow the user of images in signatures.
-* __Emojie size__: the size in pixels an emoji is displayed with.
 * __Indent size__: the number of spaces that represent a tab in a `[code]`-block.
 * __Maximum `[quote]` depth__: maximum number of times the `[quote]`-tag can be used within itself.
 

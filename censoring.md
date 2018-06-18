@@ -4,7 +4,7 @@ With censoring, you can easily manage which words need to be replaced with anoth
 ## Add censored word
 You can add a new censored word by entering a "Censored word" in the sidebar followed by a "Replacement word".
 
-Note that censoring a word affects the username, threads, comments, signatures and any other content an user can post. Additionally, Luna will cesnor only full appearance, so censoring "Lu" and replacing it with "Nu" won't result in "Luna" being written as "Runa". You can however use wildcards if you would like to achieve such an effect.
+Note that censoring a word affects the username, threads, comments, signatures and any other content an user can post. Additionally, Luna will censor only full appearance, so censoring "Lu" and replacing it with "Nu" won't result in "Luna" being written as "Runa". You can however use wildcards if you would like to achieve such an effect.
 
 If you censor a word and the replacement word itself is already censored as well, Luna will replace the word with the replacement word of your censored replacement wordn.
 

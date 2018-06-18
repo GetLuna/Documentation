@@ -68,6 +68,7 @@
                     { "id": "settings",             "title": "Settings" },
                     { "id": "features",             "title": "Features" },
                     { "id": "theme",                "title": "Theme" },
+                    { "id": "emoji",                "title": "Emoji" },
                     { "id": "menu",                 "title": "Menu" }
                 ]
             }, {

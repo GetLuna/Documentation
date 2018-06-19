@@ -1,5 +1,5 @@
 # Language packs
-For an overview of language packs and how to install them, please see the <a href="customizing.php">customizing</a> page.
+For an overview of language packs and how to install them, please see the [customizing](customizing) page.
 
 ## Developing
 Until the official Luna Translation Center is finished, which will allow for translating the software online, language packs have to be created by hand.

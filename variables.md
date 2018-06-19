@@ -1,5 +1,5 @@
 # Global variables
-Below is a list of global variables which can be found within any Luna script (i.e. are set when `include/common.php` is included). The most used and important ones are probably <a href="variables.php">$db</a>, <a href="variables.php">$luna_user</a> and <a href="variables.php">$luna_config</a>.
+Below is a list of global variables which can be found within any Luna script (i.e. are set when `include/common.php` is included). The most used and important ones are probably `$db`, `$luna_user` and `$luna_config`.
 
 ## Configuration variables
 The below variables are defined by the admin within config.php during installation. Usually they should not be needed once the database connection has been set up and the users cookie has been authenticated.
@@ -20,7 +20,7 @@ The username required to access the database.
 The password required to access the database.
 
 ### `$db_prefix`
-The table prefix used within the database (to allow multiple Luna installs within one database). This can also (and should be) accessed using `$db→prefix`, for more information see the <a href="dblayer.php">Database layer</a> page.
+The table prefix used within the database (to allow multiple Luna installs within one database). This can also (and should be) accessed using `$db→prefix`, for more information see [database layer](dblayer).
 
 ### `$cookie_name`
 The name of the cookie which Luna uses to keep track of a users session.
@@ -34,10 +34,10 @@ Used to seed the password hash stored within the users cookie.
 The variables below are the most important global variables within Luna.
 
 ### `$db`
-The `$db` variable is an instance of the <a href="dblayer.php">Database layer</a>, used for communicating with the underlying database. For more information please see the <a href="dblayer.php">Database layer</a> page.
+The `$db` variable is an instance of the [database layer](dblayer), used for communicating with the underlying database. For more information please see the [database layer](dblayer) page.
 
 ### `$luna_user`
-The `$luna_user` variable is an associative array which holds information (taken from the <a href="dbstructure.php">users</a> and <a href="dbstructure.php">groups</a> database tables) about the current logged in user (or guest).
+The `$luna_user` variable is an associative array which holds information (taken from the [users and groups](dbstructure) database tables) about the current logged in user (or guest).
 
 As well as the information from the users and groups tables it also holds a few other values:
 
@@ -105,7 +105,7 @@ The `$luna_config` variable holds an associative array with the contents of the 
 | `o_avatars_height` | `"128"` | The maximum height (in pixels) that a users avatar may be. |
 | `o_avatars_size` | `"30720"` | The maximum size (in bytes) that a users avatar may be. |
 | `o_search_all_forums` | `"1"` | Allow users to search all forums at once? |
-| `o_base_url` | `"<a title="http://www.example.org/forums" href="http://www.example.org/forums" rel="nofollow">http://www.example.org/forums</a>"`* | The base URL of the forum (without the trailing slash) |
+| `o_base_url` | `"http://www.example.org/forums"`* | The base URL of the forum (without the trailing slash) |
 | `o_admin_email` | `"admin@example.org"`* | The email address of the forum administrator. |
 | `o_webmaster_email` | `"webmaster@example.org"`* | The email address from which emails sent should be addressed. |
 | `o_forum_subscriptions` | `"1"` | Allow users to subscribe to forums (receive an email when someone makes a new thread)? |
@@ -174,7 +174,7 @@ $luna_config[$cur_config_item[0]] = $cur_config_item[1];
 ```
 
 ### `$luna_bans`
-The `$luna_bans` variable is an array of currently active bans which should be enforced, taken from the <a href="dbstructure.php">bans</a> database table. Like the `$luna_config` variable it is also <a href="caching.php">cached</a>.
+The `$luna_bans` variable is an array of currently active bans which should be enforced, taken from the [bans](dbstructure) database table. Like the `$luna_config` variable it is also [cached](caching).
 
 ```php
 // Get the ban list from the DB

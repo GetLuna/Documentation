@@ -37,12 +37,12 @@ All line breaks should be CR LF Windows only. Set your editor to save files with
 * Each declaration should have its own line for more accurate error reporting.
 * End all declarations with a semi-colon, including the last one.
 * Comma-separated property values should include a space after each comma (e.g., `box-shadow`).
-* Don't include spaces after commas <em>within</em> `rgb()`, `rgba()`, `hsl()`, `hsla()`, or `rect()` values.
+* Don't include spaces after commas _within_ `rgb()`, `rgba()`, `hsl()`, `hsla()`, or `rect()` values.
 * Don't prefix property values or color parameters with a leading zero (e.g., `.5` instead of `0.5` and `-.5px` instead of `-0.5px`).
 * Use hex values to describe colors as much as possible. If you need a transparent color, use `rgba()`.
 * Lowercase all hex values, e.g., `#fff`. Lowercase letters are easier to discern when scanning a document as they tend to have more unique shapes.
 * Use shorthand hex values where available, e.g., `#fff` instead of `#ffffff`.
-* Quote attribute values in selectors, e.g., `input[type="text"]`. <A href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">They&rsquo;re only optional in some cases</A>, and it&rsquo;s a good practice for consistency.
+* Quote attribute values in selectors, e.g., `input[type="text"]`. [They are only optional in some cases](http://mathiasbynens.be/notes/unquoted-attribute-values#css), and it's a good practice for consistency.
 * Avoid specifying units for zero values, e.g., `margin: 0;` instead of `margin: 0px;`.
 
 ```css

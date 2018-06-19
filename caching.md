@@ -29,6 +29,7 @@ These functions are available to generate caches:
 * `generate_bans_cache()`
 * `generate_censoring_cache()`
 * `generate_config_cache()`
+* `generate_emoji_cache()`
 * `generate_ranks_cache()`
 * `generate_stopwords_cache()`
 * `generate_update_cache()`

@@ -57,7 +57,7 @@ $luna_user['is_admmod'] = $luna_user['g_id'] == LUNA_ADMIN || $luna_user['g_mode
 ```
 
 ### `$luna_config`
-The `$luna_config` variable holds an associative array with the contents of the <a href="dbstructure.php">config</a> database table. Please note that to save querying the database on every page load this variable is <a href="caching.php">cached</a>, simply updating the database will not cause the cache to refresh.
+The `$luna_config` variable holds an associative array with the contents of the [config](dbstructure) database table. Please note that to save querying the database on every page load this variable is [cached](caching), simply updating the database will not cause the cache to refresh.
 
 | Name | Default value | Description |
 | --- | --- | --- |

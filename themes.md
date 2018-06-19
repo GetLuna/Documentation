@@ -95,7 +95,11 @@ The `theme.json`-file contains basic information about your theme that is used o
         "night_mode": true,
         "notification_flyout": true,
         "statistics": true
-    }
+    },
+    "config": [
+        { "name": "sunrise_installed",      "default": 1 },
+        { "name": "activated_sunrise",      "default": 1 }
+    ]
 }
 ```
 
@@ -110,9 +114,10 @@ The `theme.json`-file contains basic information about your theme that is used o
 * __maxversion__: the maximum required version of Luna that this theme can run on.
 * __parent__: optional field to indicate that the theme is a child theme and what its parent is. Files that are required but are not present in the theme will be searched for in the team listed here.
 * __features__: a list of features the theme supports. When not supported, Luna can show a warning next to the relevant setting in the Backstage to notify the user that these functions won't work. For a full liskt of options, see the features-table below.
+* __config__: an array of values you want to add to the `config` table for your theme to manage.
 
 ### Theme features
-Themes can declare in thier `theme.json`-file which Luna features are supported by them in the `features`-field.
+Themes can declare in their `theme.json`-file which Luna features are supported by them in the `features`-field.
 
 | Name | Value type | Default | Required | Description |
 | --- | --- | --- |
@@ -137,6 +142,14 @@ Luna requires themes to at least support 1 accent color. If only 1 accent color 
 | --- | --- | --- |
 | `id` | `integer` | _none_ | Yes | An unique integer to identify the accent |
 | `color` | `string ` | _none_ | Yes | Any valid value that can be set for the `background` property in CSS like `#2788cb` or go with a fancy gradient like `linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)`, or anthing else |
+
+### Theme config
+Themes can declare in their `theme.json`-file which any new config they want to use and add to the database. Upon installation by the users thes configurations are added to the database, when uninstalled, they are dropped again.
+
+| Name | Value type | Default | Required | Description |
+| --- | --- | --- |
+| `name` | `string` | _none_ | Yes | The name of the configuration. Luna will automatically add `t_styleid_` as a prefix |
+| `value` | `undefined` | _none_ | Yes | The default value opun installation |
 
 ### Empty example
 Below you can find the minimum required structure for the `theme.json`.

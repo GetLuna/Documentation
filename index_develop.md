@@ -3,8 +3,8 @@
     <div class="col-6 col-md-4">
         <div class="list-group">
             <h5 class="list-group-header"><i class="fal fa-fw fa-wrench"></i> Develop</h5>
-            <a class="list-group-item" href="php_conventions">PHP coding conventions</a>
-            <a class="list-group-item" href="css_conventions">CSS coding conventions</a>
+            <a class="list-group-item" href="conventions">Coding conventions</a>
+            <a class="list-group-item" href="css_conventions">(S)CSS coding conventions</a>
             <a class="list-group-item" href="troubleshooting">Troubleshooting</a>
         </div>
     </div>

@@ -67,6 +67,7 @@
                 "pages" : [
                     { "id": "settings",             "title": "Settings" },
                     { "id": "features",             "title": "Features" },
+                    { "id": "appearance",           "title": "Appearance" },
                     { "id": "theme",                "title": "Theme" },
                     { "id": "emoji",                "title": "Emoji" },
                     { "id": "menu",                 "title": "Menu" }

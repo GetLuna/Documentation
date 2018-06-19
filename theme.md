@@ -1,27 +1,18 @@
 # Theme
-## Theme
-* __Theme__: the theme the board uses.
-* __Accent color__: allow users to set another accent color in their profile.
-* __Night mode__: allow users to enable night mode.
-* __Default__: the default accent color used for the front-end for guests and new accounts. Changing the accent color won't change the color of any registered users.
-* __Custom CSS__: use custom CSS to add some more styling to your theme.
-* __CSS code__: the actual CSS used for you custom CSS.
-* __Header background__: a background used by your theme and the Backstage. Themes need to provide support for this functionality.
-* __Font Awesome Pro__: tell Luna that this board has access to Font Awesome Pro. This will also enable the "light" icon option. For more information, see [Font Awesome](fontawesome).
+Starting with Luna 2.1, themes required to be installed first. No worries when you're upgrading, though, Luna will take care of Typography, Fifteen and Sunrise when you cross the line between FluxBB/ModernBB/Luna 1.x-2.0 and 2.1 for the first time.
 
-## Display
-* __User info__: show information about the user under the username in threads, requires theme support.
-* __User comment count__: show the number of comments made in threads, profiles and user list.
-* __Index settings__: show a "Mderated by" list in the forum list, requires theme support.
-* __Threads per page__: the number of threads before pagination appears.
-* __Comments per page__: the number of comments in a thread before pagination appears.
+## Installed themes
+All themes that are installed are listed here. Luna will show you the title and version of the theme, as well as a description, the developer and a link to the developer's page. From here you can take a number of actions:
 
-## Header
-* __Notifications__: show a fly-out when clicking on the notification icon, requires theme support.
-* __Search__: show a search bar in the heading, requires theme support.
+* __Activate__: activating the theme will set it as your boards theme. This might have a number of side effects:
+    * If the theme supports less accents than your previous theme, you or your users might have set an accent `id` that no longer exists. For those users and the default accent setting, the accent will be reset to `1`, which every theme is required to have.
+* __Uninstall__: uninstalls the theme. This will remove all data the theme might hold in the database. This action is irreversable.
+* __Update__: if a theme's installed version is out of sync with the version available in the `/themes/`-folder, you will have to update it. Your theme might already work as expected, but an update might add new configuration options that previous versions did not have, or remove them. Note that Luna's updater will automatically take care of updating Typography, Fifteen and Sunrise is they are installed.
 
-## Footer
-* __Statistics__: show statistics about your board in the footer, requires theme support.
-* __Back to top__: show a "Back to top" link in the footer, requires theme support.
-* __Copyright__: show a copyright notice in the footer.
-* __Copyright content__: show the default copyright message or customize it yourself.
+Further, themes can add their own actions like "Settings" and more.
+
+## Available themes
+Themes that are "available" have a folder in the `/themes/`-folder in the root of your Luna installation but have not been installed. From here, you can take a number of actions:
+
+* __Install__: installing the theme will add all configurations that the theme might have to your database and make it possible for you to activate it.
+* __Delete__: delete will remove the entire folder of the theme from your installation, this action is irreversable.

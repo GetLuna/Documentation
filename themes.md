@@ -48,7 +48,6 @@ This is a list of files that are required to be in your theme, grouped to show y
 	* `user.php`
 
 ### Optional for parent and child themes
-* `theme_settings.php`
 * Any other file you can think of
 
 ## theme.json
@@ -59,6 +58,7 @@ The `theme.json`-file contains basic information about your theme that is used o
     "id": "sunrise",
     "name": "Sunrise",
     "developer": "Studio 384",
+    "url": "https://getluna.org",
     "description": "Sunset is a variant upon Fifteen, featuring a more classic design.",
     "date": "14 June 2018",
     "version": "3.1-alpha.3",
@@ -66,7 +66,23 @@ The `theme.json`-file contains basic information about your theme that is used o
     "maxversion": "2.1-alpha.3",
     "parent": "fifteen",
     "features": {
-        "accent_colors": 15,
+        "accents": [
+            { "id": 1,      "color": "#14a3ff" },
+            { "id": 2,      "color": "#2788cb" },
+            { "id": 3,      "color": "#0d4382" },
+            { "id": 4,      "color": "#c58be2" },
+            { "id": 5,      "color": "#ea69ae" },
+            { "id": 6,      "color": "#8bb805" },
+            { "id": 7,      "color": "#047a36" },
+            { "id": 8,      "color": "#ffcd21" },
+            { "id": 9,      "color": "#ff7521" },
+            { "id": 10,     "color": "#ff4444" },
+            { "id": 11,     "color": "#c71f1f" },
+            { "id": 12,     "color": "#c78d68" },
+            { "id": 13,     "color": "#ccc" },
+            { "id": 14,     "color": "#999" },
+            { "id": 15,     "color": "#444" }
+        ],
         "announcement_types": true,
         "back_to_top": true,
         "copyright": true,
@@ -86,6 +102,7 @@ The `theme.json`-file contains basic information about your theme that is used o
 * __id__: the id of the theme, this has to be unique. While it is unlikely that 2 themes with the same ID will be on the same installation, it is perhaps best adviced to use the name of the theme in lowercase followed by a random string.
 * __name__: the name of the theme.
 * __developer__: the person, people or organization that developed the theme.
+* __url__: the URL to the developer's page.
 * __description__: a short description of what the theme has to offer.
 * __date__: the date of release of the current version.
 * __version__: the version of the theme.
@@ -97,21 +114,48 @@ The `theme.json`-file contains basic information about your theme that is used o
 ### Theme features
 Themes can declare in thier `theme.json`-file which Luna features are supported by them in the `features`-field.
 
-| Name | Value type | Default | Description |
+| Name | Value type | Default | Required | Description |
 | --- | --- | --- |
-| `accent_colors` | `integer` | `0` | The number of supported accent colors |
-| `announcement_types` | `boolean` | `false` | Whether or not different announcement types are supported |
-| `back_to_top` | `boolean` | `false` | Whether or not "Back to top" is supported |
-| `copyright` | `boolean` | `false` | Whether or not the theme shows a copyright message |
-| `custom_copyright` | `boolean` | `false` | Whether or not the copyright message can be customized |
-| `custom_css` | `boolean` | `false` | Whether or not the theme supports custom cSS |
-| `first_run` | `boolean` | `false` | Whether or not the theme supports the First run experience |
-| `header_background` | `boolean` | `false` | Whether or not the theme can use a header background |
-| `header_search` | `boolean` | `false` | Whether or not the theme has a search field available outside the search page |
-| `moderated_by_list` | `boolean` | `false` | Whether or not the "Moderated by" list is showsn |
-| `night_mode` | `boolean` | `false` | Whether or not the theme support a dark mode |
-| `notification_flyout` | `boolean` | `false` | Whether or not the theme supports a notification fly-out |
-| `statistics` | `boolean` | `false` | Whether or not the theme supports showing statistics |
+| `accents` | `array` | _none_ | Yes | A list consisting of `id` and `color` paires of accents supported by the theme |
+| `announcement_types` | `boolean` | `false` | No | Whether or not different announcement types are supported |
+| `back_to_top` | `boolean` | `false` | No | Whether or not "Back to top" is supported |
+| `copyright` | `boolean` | `false` | No | Whether or not the theme shows a copyright message |
+| `custom_copyright` | `boolean` | `false` | No | Whether or not the copyright message can be customized |
+| `custom_css` | `boolean` | `false` | No | Whether or not the theme supports custom cSS |
+| `first_run` | `boolean` | `false` | No | Whether or not the theme supports the First run experience |
+| `header_background` | `boolean` | `false` | No | Whether or not the theme can use a header background |
+| `header_search` | `boolean` | `false` | No | Whether or not the theme has a search field available outside the search page |
+| `moderated_by_list` | `boolean` | `false` | No | Whether or not the "Moderated by" list is showsn |
+| `night_mode` | `boolean` | `false` | No | Whether or not the theme support a dark mode |
+| `notification_flyout` | `boolean` | `false` | No | Whether or not the theme supports a notification fly-out |
+| `statistics` | `boolean` | `false` | No | Whether or not the theme supports showing statistics |
 
-## theme_settings.php
-The `theme_settings.php`-file will show theme settings on the Backstage's Themes-page. You can use this to show theme specific settings or instructions. You can do with it whatever you like.
+#### Accents
+Luna requires themes to at least support 1 accent color. If only 1 accent color is included in a theme, the Backstage will show the theme as not suppoting accent colors.
+
+| Name | Value type | Default | Required | Description |
+| --- | --- | --- |
+| `id` | `integer` | _none_ | Yes | An unique integer to identify the accent |
+| `color` | `string ` | _none_ | Yes | Any valid value that can be set for the `background` property in CSS like `#2788cb` or go with a fancy gradient like `linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)`, or anthing else |
+
+### Empty example
+Below you can find the minimum required structure for the `theme.json`.
+
+```json
+{
+    "id": "",
+    "name": "",
+    "developer": "",
+    "url": "",
+    "description": "",
+    "date": "",
+    "version": "",
+    "minversion": "",
+    "maxversion": "",
+    "features": {
+        "accents": [
+            { "id": 1,      "color": "" },
+        ]
+    }
+}
+```

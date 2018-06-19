@@ -58,13 +58,28 @@ The `theme.json`-file contains basic information about your theme that is used o
 {
     "id": "sunrise",
     "name": "Sunrise",
-	"developer": "Studio 384",
-	"description": "Sunset is a variant upon Fifteen, featuring a more classic design.",
+    "developer": "Studio 384",
+    "description": "Sunset is a variant upon Fifteen, featuring a more classic design.",
     "date": "14 June 2018",
-    "version": "3.1-alpha.2",
-    "minversion": "2.0.0",
-    "maxversion": "3.1-alpha.2",
-    "parent": "fifteen"
+    "version": "3.1-alpha.3",
+    "minversion": "2.1-alpha.3",
+    "maxversion": "2.1-alpha.3",
+    "parent": "fifteen",
+    "features": {
+        "accent_colors": 15,
+        "announcement_types": true,
+        "back_to_top": true,
+        "copyright": true,
+        "custom_copyright": true,
+        "custom_css": true,
+        "first_run": true,
+        "header_background": true,
+        "header_search": true,
+        "moderated_by_list": false,
+        "night_mode": true,
+        "notification_flyout": true,
+        "statistics": true
+    }
 }
 ```
 
@@ -77,6 +92,26 @@ The `theme.json`-file contains basic information about your theme that is used o
 * __minversion__: the minimum required version of Luna that this theme can run on.
 * __maxversion__: the maximum required version of Luna that this theme can run on.
 * __parent__: optional field to indicate that the theme is a child theme and what its parent is. Files that are required but are not present in the theme will be searched for in the team listed here.
+* __features__: a list of features the theme supports. When not supported, Luna can show a warning next to the relevant setting in the Backstage to notify the user that these functions won't work. For a full liskt of options, see the features-table below.
+
+### Theme features
+Themes can declare in thier `theme.json`-file which Luna features are supported by them in the `features`-field.
+
+| Name | Value type | Default | Description |
+| --- | --- | --- |
+| `accent_colors` | `integer` | `0` | The number of supported accent colors |
+| `announcement_types` | `boolean` | `false` | Whether or not different announcement types are supported |
+| `back_to_top` | `boolean` | `false` | Whether or not "Back to top" is supported |
+| `copyright` | `boolean` | `false` | Whether or not the theme shows a copyright message |
+| `custom_copyright` | `boolean` | `false` | Whether or not the copyright message can be customized |
+| `custom_css` | `boolean` | `false` | Whether or not the theme supports custom cSS |
+| `first_run` | `boolean` | `false` | Whether or not the theme supports the First run experience |
+| `header_background` | `boolean` | `false` | Whether or not the theme can use a header background |
+| `header_search` | `boolean` | `false` | Whether or not the theme has a search field available outside the search page |
+| `moderated_by_list` | `boolean` | `false` | Whether or not the "Moderated by" list is showsn |
+| `night_mode` | `boolean` | `false` | Whether or not the theme support a dark mode |
+| `notification_flyout` | `boolean` | `false` | Whether or not the theme supports a notification fly-out |
+| `statistics` | `boolean` | `false` | Whether or not the theme supports showing statistics |
 
 ## theme_settings.php
 The `theme_settings.php`-file will show theme settings on the Backstage's Themes-page. You can use this to show theme specific settings or instructions. You can do with it whatever you like.

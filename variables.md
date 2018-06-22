@@ -59,25 +59,24 @@ $luna_user['is_admmod'] = $luna_user['g_id'] == LUNA_ADMIN || $luna_user['g_mode
 ### `$luna_config`
 The `$luna_config` variable holds an associative array with the contents of the [config](dbstructure) database table. Please note that to save querying the database on every page load this variable is [cached](caching), simply updating the database will not cause the cache to refresh.
 
+#### Settings
+The configs listed below are part of `$luna_config` and can all be manipulated through the Backstage.
+
 | Name | Default value | Description |
 | --- | --- | --- |
-| `o_cur_version` | `"1.3.0"`* | The current version of Luna that is installed. |
-| `o_core_version` | `"1.3.5118"`* | The current version of Luna core that is installed. |
-| `o_code_name` | `"denim"`* | The current name of Luna core that is installed. |
-| `o_database_revision` | `"90.70"`* | The current version of the database structure. |
-| `o_searchindex_revision` | `"2.0"`* | The current version of the search index engine. During an update if this increments all comments will be indexed again. |
-| `o_parser_revision` | `"11.2.0"`* | The current version of the parser. During an update, if this increments all comments will be preparsed again. |
-| `o_board_title` | `"Denim"`* | The title of the forum, by default Luna uses its current code name. |
-| `o_board_desc` | `"You can do anything"`* | A short description of the forum, usually displayed below the board title, by default the Luna slogan. |
-| `o_default_timezone` | `"0"` | The default time zone (offset from UTC). |
+| `o_board_title` | `"Fallow"`* | The title of the forum, by default Luna uses its current code name. |
+| `o_board_tags` | `"NULL"` | A number of keywords that describe the board best. |
+| `o_board_slogan` | `"You can do anything"`* | The slogan of your brand. |
+| `o_board_desc` | `"NULL"` | A short description of the forum, usually displayed below the board title. |
+| `o_timezone` | `"UTC"` | The default time zone. |
 | `o_time_format` | `"H:i"` | The default time format string (see the PHP [date](http://uk2.php.net/manual/en/function.date.php) function). |
-| `o_date_format` | `"j M Y"` | The default date format string (see the PHP [date](http://uk2.php.net/manual/en/function.date.php) function). |
+| `o_date_format` | `"j F Y"` | The default date format string (see the PHP [date](http://uk2.php.net/manual/en/function.date.php) function). |
 | `o_timeout_visit` | `"1800"` | Number of seconds a user must be idle before his/hers last visit data is updated (primarily affects new message indicators). |
 | `o_timeout_online` | `"300"` | Number of seconds a user must be idle before being removed from the online users list. |
 | `o_show_user_info` | `"1"` | Show users information (such as location, registration date, contact link, etc…) with their comments? |
 | `o_show_comment_count` | `"1"` | Show users comment count? |
 | `o_signatures` | `"1"` | Enable the use of signatures? |
-| `o_smilies_sig` | `"1"` | Allow the user of smilies inside users signatures? |
+| `o_smilies_sig` | `"1"` | Allow the user of emoji inside users signatures? |
 | `o_make_links` | `"1"` | Automatically convert URLs in comments to links? |
 | `o_default_lang` | `"English"`* | The default language pack to be used. |
 | `o_default_style` | `"Fifteen"`* | The default theme to be used. |
@@ -99,6 +98,7 @@ The `$luna_config` variable holds an associative array with the contents of the 
 | `o_regs_report` | `"0"` | Should new registrations be emailed to the mailing list (see o_mailing_list)? |
 | `o_default_email_setting` | `"1"` | What should the default email setting be for newly registered users? 0 = Display email address, 1 = Hide email address but allow form emails, 2 = Hide email address and disallow form emails. |
 | `o_mailing_list` | `""` | A comma separated list of email addresses to which reports should be delivered. |
+| `o_moderate_by` | `"1"` | Show a list of moderators below each forum. |
 | `o_avatars` | `"1"` | Enable the use of users avatars? |
 | `o_avatars_dir` | `"img/avatars"` | The (relative) path of the directory where users avatars should be stored. |
 | `o_avatars_width` | `"128"` | The maximum width (in pixels) that a users avatar may be. |
@@ -120,9 +120,7 @@ The `$luna_config` variable holds an associative array with the contents of the 
 | `o_smtp_ssl` | `"0"` | Does the SMTP server require SSL? |
 | `o_regs_allow` | `"1"` | Allow new users to register? |
 | `o_regs_verify` | `"0"` | Verify new registrations by sending a verification email to their email address? |
-| `o_video_width` | `"640"` | The width of an embedded video. |
-| `o_video_height` | `"360"` | The height of an embedded video. |
-| `o_advanced_search` | `"1"` | Enable the use of advanced search? |
+| `o_enable_advanced_search` | `"1"` | Enable the use of advanced search? |
 | `o_announcement` | `"0"` | Display an announcement? This shows the announcement message set in o_announcement_message in an announcement box on every forum page. |
 | `o_announcement_message` | `"Announcement"` | An announcement message to show on every forum page when announcements are enabled. |
 | `o_announcement_title` | `"NULL"` | The title of your announcement. |
@@ -130,42 +128,58 @@ The `$luna_config` variable holds an associative array with the contents of the 
 | `o_rules` | `"0"` | Enable the use of forum rules? |
 | `o_rules_message` | `"Rules"` | The rules for your forum. This field may contain HTML. |
 | `o_maintenance` | `"0"` | Enable maintenance mode? This prevents anyone who isn't an administrator from using the board. |
-| `o_maintenance_message` | `"The forums are temporarily down for maintenance.` `Please try again in a few minutes."` | A message to be displayed to anyone attempting to use the board when maintenance mode is enabled. |
-| `o_default_dst` | `"0"` | The default DST offset, either 1 or 0. |
+| `o_maintenance_message` | `"The forums are temporarily down for maintenance. Please try again in a few minutes."` | A message to be displayed to anyone attempting to use the board when maintenance mode is enabled. |
 | `o_feed_type` | `"2"` | The type of syndication feed to use. 0 = None, 1 = RSS, 2 = Atom. |
 | `o_feed_ttl` | `"0"` | The duration (in minutes) to cache certain feed pages. |
 | `o_cookie_bar` | `"1"` | Display a cookie bar. |
 | `o_cookie_bar_url` | `"http://getluna.org/docs/cookies.php"` | The URL where to get more info on cookies, by default it points to this documentation. |
-| `o_emoji` | `"0"` | Enable emojis instead of emoticons. |
-| `o_emoji_size` | `"16"` | The font size of emojis when used. |
 | `o_admin_notes` | `"NULL"` | Saves the admin note in the Backstage index. |
-| `o_pms_enabled` | `"1"` | Use the Inbox private messaging system. |
-| `o_pms_mess_per_page` | `"10"` | Amount of messages per page in Inbox. |
-| `o_pms_max_receiver` | `"5"` | The maximum amount of receivers per message. |
-| `o_emoji_size` | `"16"` | The size of an emoticon. |
+| `o_inbox_notification` | `"0"` | Whether or not Luna is allowed to notify users about Inbox. |
+| `o_enable_inbox` | `"1"` | Use the Inbox private messaging system. |
 | `o_back_to_top` | `"1"` | Display a "Back to top" link in the footer. |
 | `o_show_copyright` | `"1"` | Show the copyright in the footer. |
 | `o_copyright_type` | `"0"` | Customize copyright to your own or use the automatically generated copyright. |
+| `o_custom_css` | `NULL` | Extra CSS you want to include in your baord. |
 | `o_custom_copyright` | `NULL` | Show a custom copyright text in the footer. |
 | `o_header_search` | `"1"` | Display a search box in the header (theme dependend). |
 | `o_board_statistics` | `"1"` | Show the board statistics (theme depended). |
 | `o_notification_flyout` | `"1"` | Show a flyout when clicking on the notification icon, or go directly to the page (theme depended). |
-| `o_update_ring` | `"1"` | The current Update Ring where Luna checks for updates. |
-| `p_message_bbcode` | `"1"` | Enable the use of bbcode within comments? |
-| `p_message_img_tag` | `"1"` | Enable the use of image tags within comments? |
-| `p_message_all_caps` | `"1"` | Allow users to comment a message containing all capitals? |
-| `p_subject_all_caps` | `"1"` | Allow users to comment a message with the subject containing all capitals? |
-| `p_sig_all_caps` | `"1"` | Allow users to have a signature made up of all capitals? |
-| `p_sig_bbcode` | `"1"` | Enable the use of bbcode within signatures? |
-| `p_sig_img_tag` | `"0"` | Enable the use of image tags within signatures? |
-| `p_sig_length` | `"400"` | The maximum length of a users signature (in characters). |
-| `p_sig_lines` | `"4"` | The maximum number of lines a users signature may contain. |
-| `p_allow_banned_email` | `"1"` | Allow users to register with a banned email address? If enabled the registration will be allowed but an alert will be sent to the mailing list (see o_mailing_list). |
-| `p_allow_dupe_email` | `"0"` | Allow users to register with an email address that is already being used? If enabled an alert will be sent to the mailing list (see o_mailing_list) when a duplicate is detected. |
-| `p_force_guest_email` | `"1"` | Require guests to supply an email address when commenting? |
+| `o_use_custom_css` | `"0"` | Wether or not Luna should use the custom CSS. |
+| `o_use_cdn` | `"1"` | Require Luna to get Bootstrap and jQuery from CDNs. |
+| `o_fontawesomepro` | `"0"` | Enable this to show Font Awesome Pro features in Luna. |
+| `o_message_bbcode` | `"1"` | Enable the use of bbcode within comments? |
+| `o_message_img_tag` | `"1"` | Enable the use of image tags within comments? |
+| `o_message_all_caps` | `"1"` | Allow users to comment a message containing all capitals? |
+| `o_max_receivers` | `"5"` | Nomber of allowed receivers for each Inbox message |
+| `o_subject_all_caps` | `"1"` | Allow users to comment a message with the subject containing all capitals? |
+| `o_sig_all_caps` | `"1"` | Allow users to have a signature made up of all capitals? |
+| `o_sig_img_tag` | `"0"` | Enable the use of image tags within signatures? |
+| `o_sig_length` | `"400"` | The maximum length of a users signature (in characters). |
+| `o_sig_lines` | `"4"` | The maximum number of lines a users signature may contain. |
+| `o_allow_spoiler` | `"0"` | Allow the use of the spoiler tag. |
+| `o_allow_size` | `"0"` | Allow the use of the size tag. |
+| `o_allow_center` | `"0"` | Allow the use of the center tag. |
+| `o_allow_banned_email` | `"1"` | Allow users to register with a banned email address? If enabled the registration will be allowed but an alert will be sent to the mailing list (see o_mailing_list). |
+| `o_allow_dupe_email` | `"0"` | Allow users to register with an email address that is already being used? If enabled an alert will be sent to the mailing list (see o_mailing_list) when a duplicate is detected. |
+| `o_force_guest_email` | `"1"` | Require guests to supply an email address when commenting? |
 
 *These values depend on the information given during installation of Luna or the version you have installed, and do not have a default as such.
 
+#### System values
+The values listed below are also part of `$luna_config` but are only managed by Luna. The user can't, or shouldn't manipulate these rows.
+
+| Name | Default value | Description |
+| --- | --- | --- |
+| `o_cur_version` | `"2.1.0"`* | The current version of Luna that is installed. |
+| `o_core_version` | `"2.1.5947"`* | The current version of Luna core that is installed. |
+| `o_code_name` | `"Fallow"`* | The current name of Luna core that is installed. |
+| `o_database_revision` | `"92.31"`* | The current version of the database structure. |
+| `o_searchindex_revision` | `"2.0"`* | The current version of the search index engine. During an update if this increments all comments will be indexed again. |
+| `o_parser_revision` | `"11.5.1"`* | The current version of the parser. During an update, if this increments all comments will be preparsed again. |
+
+*These values depend on the information given during installation of Luna or the version you have installed, and do not have a default as such.
+
+#### Getting a value
 ```php
 // Get the forum config from the DB
 $result = $db->query('SELECT * FROM '.$db->prefix.'config', true) or error('Unable to fetch forum config', __FILE__, __LINE__, $db->error());

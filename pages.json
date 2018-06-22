@@ -128,7 +128,7 @@
                 "title": "References",
                 "icon": "fal fa-fw fa-bookmark",
                 "pages" : [
-                    { "id": "constats",             "title": "Constants" },
+                    { "id": "constants",            "title": "Constants" },
                     { "id": "dbstructure",          "title": "Database structure" },
                     { "id": "dblayer",              "title": "Database layer" },
                     { "id": "variables",            "title": "Global variables" },

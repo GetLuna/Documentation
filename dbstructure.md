@@ -37,7 +37,7 @@ The bans table is used to hold details of all current bans. It is important to n
 
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
+| *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
 | `username` | `varchar(200)` | `NULL` | The username this ban applies to, or `NULL` for none. |
 | `ip` | `varchar(255)` | `NULL` | The IP address(es) this ban applies to, or `NULL` for none. |
 | `email` | `varchar(80)` | `NULL` | The email address this ban applies to, or `NULL` for none. |
@@ -48,14 +48,14 @@ The bans table is used to hold details of all current bans. It is important to n
 ### categories
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
+| *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
 | `cat_name` | `varchar(80)` | `"New Category"` | The name of the category. |
 | `disp_position` | `int(10)` | `0` | The position of this category in relation to the others. |
 
 ### censoring
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
+| *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
 | `search_for` | `varchar(60)` | `""` | The term to search for. |
 | `replace_with` | `varchar(60)` | `""` | The term to replace with. |
 
@@ -66,13 +66,13 @@ For more information about the actual contents of the config table, see the $lun
 
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`conf_name`_ | `varchar(255)` | `""` | The name of the configuration variable. General configuration options start with the prefix o_ and general permission options start with the prefix p_. |
+| *`conf_name`* | `varchar(255)` | `""` | The name of the configuration variable. General configuration options start with the prefix o_ and general permission options start with the prefix p_. |
 | `conf_value` | `text` | `NULL` | The value of the configuration variable. |
 
 ### forums
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
+| *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
 | `forum_name` | `varchar(80)` | `"New forum"` | The name of the forum. |
 | `forum_desc` | `text` | `NULL` | A description of the forum (may contain HTML). |
 | `moderators` | `text` | `NULL` | A serialized associative PHP array with moderator names ⇒ user IDs. |
@@ -90,8 +90,8 @@ For more information about the actual contents of the config table, see the $lun
 ### forum_perms
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`group_id`_ | `int(10)` | `0` | The ID of the group this permission set applies to. |
-| _`forum_id`_ | `int(10)` | `0` | The ID of the forum this permission set applies to. |
+| *`group_id`* | `int(10)` | `0` | The ID of the group this permission set applies to. |
+| *`forum_id`* | `int(10)` | `0` | The ID of the forum this permission set applies to. |
 | `read_forum` | `tinyint(1)` | `1` | Allow members of the group to view this forum? |
 | `comment_replies` | `tinyint(1)` | `1` | Allow members of the group to comment replies in this forum? |
 | `comment_threads` | `tinyint(1)` | `1` | Allow members of the group to start new threads in this forum? |
@@ -99,15 +99,15 @@ For more information about the actual contents of the config table, see the $lun
 ### forum_subscriptions
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`user_id`_ | `int(10)` | `0` | The ID of the user which this subscription belongs to. |
-| _`forum_id`_ | `int(10)` | `0` | The ID of the forum which this subscription belongs to. |
+| *`user_id`* | `int(10)` | `0` | The ID of the user which this subscription belongs to. |
+| *`forum_id`* | `int(10)` | `0` | The ID of the forum which this subscription belongs to. |
 
 ### groups
 All fields in the groups table are prefixed with g_. This is to allow them to be easily combined with all the fields from the users table without any conflicting field names.
 
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`g_id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
+| *`g_id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
 | `g_title` | `varchar(50)` | `""` | The name of this group. |
 | `g_user_title` | `varchar(50)` | `NULL` | The user title to be used for members of this group. |
 | `g_moderator` | `tinyint(1)` | `0` | Does this group have moderator privileges? |
@@ -139,7 +139,7 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 ### menu
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`id`_ | `int(10)` | `NULL` | The ID of the menu item. |
+| *`id`* | `int(10)` | `NULL` | The ID of the menu item. |
 | `url` | `varchar(200)` | `NULL` | The URL to which the menu item should point. |
 | `name` | `varchar(200)` | `NULL` | The title of the menu item. |
 | `disp_position` | `int(10)` | `0` | The order in which the item should be displayed. |
@@ -149,7 +149,7 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 ### messages
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`id`_ | `int(10)` | `NULL` | The ID of the message. |
+| *`id`* | `int(10)` | `NULL` | The ID of the message. |
 | `shared_id` | `int(10)` | `0` | &nbsp; |
 | `last_shared_id` | `int(10)` | `0` | &nbsp; |
 | `last_comment` | `int(10)` | `0` | The latest comment in the message. |
@@ -171,7 +171,7 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 ### notifications
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`id`_ | `int(10)` | `NULL` | The ID of the notificiation. |
+| *`id`* | `int(10)` | `NULL` | The ID of the notificiation. |
 | `user_id` | `int(10)` | `0` | The ID of the user to which to notification has been send. |
 | `message` | `varchar(255)` | `0` | The content of the message within the notification. |
 | `icon` | `varchar(255)` | `0` | The Font Awesome icon used by the message. |
@@ -192,7 +192,7 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 ### comments
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
+| *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
 | `commenter` | `varchar(200)` | `""` | The username of the user who created this comment. |
 | `commenter_id` | `int(10)` | `1` | The ID of the user who created this comment. |
 | `commenter_ip` | `varchar(39)` | `NULL` | The IP address of the user who created this comment. |
@@ -209,14 +209,14 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 ### ranks
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
+| *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
 | `rank` | `varchar(50)` | `""` | The rank title. |
 | `min_comments` | `mediumint(8)` | `0` | The number of comments a user must attain in order to reach the rank. |
 
 ### reports
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
+| *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
 | `comment_id` | `int(10)` | `0` | The ID of the reported comment. |
 | `thread_id` | `int(10)` | `0` | The ID of thread in which the reported comment is contained. |
 | `forum_id` | `int(10)` | `0` | The ID of the forum in which the reported comment is contained. |
@@ -229,7 +229,7 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 ### search_cache
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
+| *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
 | `ident` | `varchar(200)` | `""` | An identifier for the user who initiated the search. For a guest their IP address is used, for a logged in user, their username. |
 | `search_data` | `mediumtext` | `NULL` | A serialized array containing search results. |
 
@@ -243,13 +243,13 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 ### search_words
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| `id` | `int(10)` | `0` | The auto-incrementing primary key for this table. |
-| `_`word`_ | `varchar(20)` | `""` | The word to be indexed. |
+| *`id`* | `int(10)` | `0` | The auto-incrementing primary key for this table. |
+| `word` | `varchar(20)` | `""` | The word to be indexed. |
 
 ### threads
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
+| *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
 | `commenter` | `varchar(200)` | `""` | The username of the user who commented this thread. |
 | `subject` | `varchar(255)` | `""` | The subject of the thread. |
 | `commented` | `int(10)` | `0` | A UNIX timestamp representing the time this thread was commented. |
@@ -269,13 +269,13 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 ### thread_subscriptions
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`user_id`_ | `int(10)` | `0` | The ID of the user which this subscription belongs to. |
-| _`thread_id`_ | `int(10)` | `0` | The ID of the thread which this subscription belongs to. |
+| *`user_id`* | `int(10)` | `0` | The ID of the user which this subscription belongs to. |
+| *`thread_id`* | `int(10)` | `0` | The ID of the thread which this subscription belongs to. |
 
 ### users
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| _`id`_ | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
+| *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
 | `group_id` | `int(10)` | `3` | The ID of the group to which this user belongs. The default is LUNA_MemBER. |
 | `username` | `varchar(200)` | `""` | The users username. |
 | `password` | `varchar(40)` | `""` | The users password hash. |

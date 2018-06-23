@@ -132,7 +132,7 @@ The configs listed below are part of `$luna_config` and can all be manipulated t
 | `o_feed_type` | `"2"` | The type of syndication feed to use. 0 = None, 1 = RSS, 2 = Atom. |
 | `o_feed_ttl` | `"0"` | The duration (in minutes) to cache certain feed pages. |
 | `o_cookie_bar` | `"1"` | Display a cookie bar. |
-| `o_cookie_bar_url` | `"http://getluna.org/docs/cookies.php"` | The URL where to get more info on cookies, by default it points to this documentation. |
+| `o_cookie_bar_url` | `"http://getluna.org/docs/cookies"` | The URL where to get more info on cookies, by default it points to this documentation. |
 | `o_admin_notes` | `"NULL"` | Saves the admin note in the Backstage index. |
 | `o_inbox_notification` | `"0"` | Whether or not Luna is allowed to notify users about Inbox. |
 | `o_enable_inbox` | `"1"` | Use the Inbox private messaging system. |

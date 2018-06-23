@@ -11,6 +11,7 @@ The following is a complete list of all Luna database tables and their structure
 * censoring
 * comments
 * config
+* emoji
 * forums
 * forum_perms
 * forum_subscriptions
@@ -24,6 +25,7 @@ The following is a complete list of all Luna database tables and their structure
 * search_cache
 * search_matches
 * search_words
+* themes
 * threads
 * thread_subscriptions
 * users
@@ -59,6 +61,23 @@ The bans table is used to hold details of all current bans. It is important to n
 | `search_for` | `varchar(60)` | `""` | The term to search for. |
 | `replace_with` | `varchar(60)` | `""` | The term to replace with. |
 
+### comments
+| Field | Type | Default | Description |
+| --- | --- | --- | --- |
+| *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
+| `commenter` | `varchar(200)` | `""` | The username of the user who created this comment. |
+| `commenter_id` | `int(10)` | `1` | The ID of the user who created this comment. |
+| `commenter_ip` | `varchar(39)` | `NULL` | The IP address of the user who created this comment. |
+| `commenter_email` | `varchar(80)` | `NULL` | If the comment was created by a guest, their email address. If it was created by a logged in user, then `NULL`. |
+| `message` | `mediumtext` | `NULL` | The contents of the comment. |
+| `hide_smilies` | `tinyint(1)` | `0` | Should smilies be hidden in this comment? |
+| `commented` | `int(10)` | `0` | A UNIX timestamp representing the time this comment was created. |
+| `edited` | `int(10)` | `NULL` | A UNIX timestamp representing the time this comment was last edited, or `NULL` if it hasn't been edited. |
+| `edited_by` | `varchar(200)` | `NULL` | The username of the user who last edited this comment, or `NULL` if it hasn't been edited. |
+| `thread_id` | `int(10)` | `0` | The ID of the parent thread for this comment. |
+| `marked` | `tinyint(1)` | `0` | If the message is reported, this will be 1. |
+| `soft` | `tinyint(1)` | `0` | If the message has been soft deleted, this will be 1. |
+
 ### config
 The config table holds key, value pairs for all the main configuration options. For performance reasons Luna caches these values and will only refresh the cache when they are updated via the admin panel.
 
@@ -68,6 +87,13 @@ For more information about the actual contents of the config table, see the $lun
 | --- | --- | --- | --- |
 | *`conf_name`* | `varchar(255)` | `""` | The name of the configuration variable. General configuration options start with the prefix o_ and general permission options start with the prefix p_. |
 | `conf_value` | `text` | `NULL` | The value of the configuration variable. |
+
+### emoji
+| Field | Type | Default | Description |
+| --- | --- | --- | --- |
+| *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
+| `unicode` | `varchar(40)` | `""` | The unicode without `U+` that generates the emoji. |
+| `text` | `varchar(20)` | `""` | The string that needs to be replaced by the unicode. |
 
 ### forums
 | Field | Type | Default | Description |
@@ -86,6 +112,9 @@ For more information about the actual contents of the config table, see the $lun
 | `cat_id` | `int(10)` | `0` | The ID of the category in which this forum resides. |
 | `color` | `varchar(25)` | `#0d4382` | The color of the forum. |
 | `parent_id` | `int(11)` | `0` | The ID of the parent forum. |
+| `solved` | `tinyint(1` | `1` | Allow users to set threads to solved. |
+| `icon` | `varchar(50)` | `""` | The name of the icon wihtout a prefix that this forum will use. |
+| `icon_style` | `int(10)` | `0` | The used style of the icon. |
 
 ### forum_perms
 | Field | Type | Default | Description |
@@ -117,8 +146,7 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | `g_mod_ban_users` | `tinyint(1)` | `0` | If g_moderator, can members of this group ban users? |
 | `g_read_board` | `tinyint(1)` | `1` | Can members of this group view boards? If this is 0 the group basically has no access to the forums. |
 | `g_view_users` | `tinyint(1)` | `1` | Can members of this group view the user list? |
-| `g_comment_replies` | `tinyint(1)` | `1` | Can members of this group comment replies? |
-| `g_comment_threads` | `tinyint(1)` | `1` | Can members of this group start new threads? |
+| `g_comment` | `tinyint(1)` | `1` | Can members of this group comment |
 | `g_edit_comments` | `tinyint(1)` | `1` | Can members of this group edit their own comments? |
 | `g_delete_comments` | `tinyint(1)` | `1` | Can members of this group delete their own comments? |
 | `g_delete_threads` | `tinyint(1)` | `1` | Can members of this group delete their own threads (including all replies)? |
@@ -129,8 +157,8 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | `g_comment_flood` | `smallint(6)` | `30` | How many seconds members of this group must wait between making comments. |
 | `g_search_flood` | `smallint(6)` | `30` | How many seconds members of this group must wait between making search requests. |
 | `g_email_flood` | `smallint(6)` | `60` | How many seconds members of this group must wait between sending emails. |
-| `g_pm` | `tinyint(1)` | `1` | Wheter or not the user is allowed to use Inbox. |
-| `g_pm_limit` | `int(11)` | `20` | The maximum amount of Inbox items an user can store. |
+| `g_inbox` | `tinyint(1)` | `1` | Whether or not the user is allowed to use Inbox. |
+| `g_inbox_limit` | `int(11)` | `20` | The maximum amount of Inbox items an user can store. |
 | `g_report_flood` | `smallint(6)` | `60` | Amount of seconds that have to pass between reports. |
 | `g_soft_delete_view` | `tinyint(1)` | `1` | Allow the group to view soft deleted items. |
 | `g_soft_delete_comments` | `tinyint(1)` | `1` | Allow the group to soft delete comments. |
@@ -144,7 +172,7 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | `name` | `varchar(200)` | `NULL` | The title of the menu item. |
 | `disp_position` | `int(10)` | `0` | The order in which the item should be displayed. |
 | `visible` | `int(10)` | `NULL` | Disable or enable the menu item. |
-| `sys_entry` | `int(10)` | `NULL` | Check wheter or not this is pre-installed item that can't be removed. |
+| `sys_entry` | `int(10)` | `NULL` | Check Whether or not this is pre-installed item that can't be removed. |
 
 ### messages
 | Field | Type | Default | Description |
@@ -177,7 +205,7 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | `icon` | `varchar(255)` | `0` | The Font Awesome icon used by the message. |
 | `link` | `varchar(255)` | `0` | The link to which the notification should point. |
 | `time` | `int(11)` | `0` | The time when to notifcation was received. |
-| `viewed` | `tinyint(1)` | `0` | Wheter or not the notification has been seen. |
+| `viewed` | `tinyint(1)` | `0` | Whether or not the notification has been seen. |
 
 ### online
 | Field | Type | Default | Description |
@@ -188,23 +216,6 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | `idle` | `tinyint(1)` | `0` | If the user is idle or not (i.e. their last visit was more than o_timeout_online seconds ago, but less than o_timeout_visit seconds ago - see the $luna_config global variable). |
 | `last_comment` | `int(10)` | `NULL` | A UNIX timestamp representing the time the user last made a comment. |
 | `last_search` | `int(10)` | `NULL` | A UNIX timestamp representing the time the user last performed a search. |
-
-### comments
-| Field | Type | Default | Description |
-| --- | --- | --- | --- |
-| *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
-| `commenter` | `varchar(200)` | `""` | The username of the user who created this comment. |
-| `commenter_id` | `int(10)` | `1` | The ID of the user who created this comment. |
-| `commenter_ip` | `varchar(39)` | `NULL` | The IP address of the user who created this comment. |
-| `commenter_email` | `varchar(80)` | `NULL` | If the comment was created by a guest, their email address. If it was created by a logged in user, then `NULL`. |
-| `message` | `mediumtext` | `NULL` | The contents of the comment. |
-| `hide_smilies` | `tinyint(1)` | `0` | Should smilies be hidden in this comment? |
-| `commented` | `int(10)` | `0` | A UNIX timestamp representing the time this comment was created. |
-| `edited` | `int(10)` | `NULL` | A UNIX timestamp representing the time this comment was last edited, or `NULL` if it hasn't been edited. |
-| `edited_by` | `varchar(200)` | `NULL` | The username of the user who last edited this comment, or `NULL` if it hasn't been edited. |
-| `thread_id` | `int(10)` | `0` | The ID of the parent thread for this comment. |
-| `marked` | `tinyint(1)` | `0` | If the message is reported, this will be 1. |
-| `soft` | `tinyint(1)` | `0` | If the message has been soft deleted, this will be 1. |
 
 ### ranks
 | Field | Type | Default | Description |
@@ -246,6 +257,13 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | *`id`* | `int(10)` | `0` | The auto-incrementing primary key for this table. |
 | `word` | `varchar(20)` | `""` | The word to be indexed. |
 
+### themes
+| Field | Type | Default | Description |
+| --- | --- | --- | --- |
+| *`id`* | `int(10)` | `0` | The auto-incrementing primary key for this table. |
+| `name` | `varchar(40)` | `""` | The id of the theme. |
+| `version` | `varchar(20)` | `""` | The version that was last set for the database. |
+
 ### threads
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -264,7 +282,8 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | `sticky` | `tinyint(1)` | `0` | Is this thread a sticky? |
 | `moved_to` | `int(10)` | `NULL` | If the thread has been moved, the ID of the new thread (this one now solely acts as a redirect). |
 | `forum_id` | `int(10)` | `0` | The ID of the forum this thread is within. |
-| `soft` | `tinyint(1)` | `0` | Wheter or not this thread has been soft deleted. |
+| `soft` | `tinyint(1)` | `0` | Whether or not this thread has been soft deleted. |
+| `solved` | `int(10)` | `0` | The ID of the comment that is the answer for the thread. |
 
 ### thread_subscriptions
 | Field | Type | Default | Description |
@@ -278,7 +297,8 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | *`id`* | `int(10)` | ` ` | The auto-incrementing primary key for this table. |
 | `group_id` | `int(10)` | `3` | The ID of the group to which this user belongs. The default is LUNA_MemBER. |
 | `username` | `varchar(200)` | `""` | The users username. |
-| `password` | `varchar(40)` | `""` | The users password hash. |
+| `password` | `varchar(512)` | `""` | The users password hash. |
+| `salt` | `varchar(8)` | `""` | The salt used on the password. |
 | `email` | `varchar(80)` | `""` | The users email address. |
 | `title` | `varchar(50)` | `NULL` | The user title. If this field is empty, the title from the user's usetgroup will be used. |
 | `realname` | `varchar(40)` | `NULL` | The real name of the user. |
@@ -299,12 +319,10 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | `show_img_sig` | `tinyint(1)` | `1` | Should images in signatures be shown to the user? |
 | `show_avatars` | `tinyint(1)` | `1` | Should avatars be shown to the user? |
 | `show_sig` | `tinyint(1)` | `1` | Should signatures to shown to the user? |
-| `timezone` | `float` | `0` | The users timezone. |
-| `dst` | `tinyint(1)` | `0` | Is the user currently observing daylight saving time? |
+| `php_timezone` | `float` | `"UTC"` | The users timezone. |
 | `time_format` | `tinyint(1)` | `0` | The time format that the user uses. |
 | `date_format` | `tinyint(1)` | `0` | The date format that the user uses. |
 | `language` | `varchar(25)` | `"English"` | The language that should be used for this user. |
-| `style` | `varchar(25)` | `"Luna"` | The name of the style that should be used for this user. |
 | `num_comments` | `int(10)` | `0` | The number of comments the user has made. Note: This is the number made, not the number that currently exist (i.e. when a comment is deleted this isn't decremented). |
 | `last_comment` | `int(10)` | `NULL` | A UNIX timestamp representing the time the user last made a comment. |
 | `last_search` | `int(10)` | `NULL` | A UNIX timestamp representing the time the user last performed a search. |
@@ -316,9 +334,14 @@ All fields in the groups table are prefixed with g_. This is to allow them to be
 | `admin_note` | `varchar(30)` | `NULL` | A note that the administrator has entered. |
 | `activate_string` | `varchar(80)` | `NULL` | A temporary storage string for new passwords and new e-mail addresses. |
 | `activate_key` | `varchar(8)` | `NULL` | A temporary storage string for new password and new e-mail address activation keys. |
-| `use_pm` | `tinyiny(1)` | `1` | Allow the user to use Inbox. |
-| `notify_pm` | `tinyiny(1)` | `1` | Notify the user for now received Inbox items. |
-| `notify_pm_full` | `tinyiny(1)` | `0` | Notify the user for new received Inbox items (full). |
-| `num_pms` | `int(10)` | `0` | The amount of Inbox items for this user. |
+| `use_inbox` | `tinyiny(1)` | `1` | Allow the user to use Inbox. |
+| `notify_inbox` | `tinyiny(1)` | `1` | Notify the user for now received Inbox items. |
+| `notify_inbox_full` | `tinyiny(1)` | `0` | Notify the user for new received Inbox items (full). |
+| `num_inbox` | `int(10)` | `0` | The amount of Inbox items for this user. |
 | `first_run` | `tinyiny(1)` | `0` | Show the First Run experience. |
-| `color_scheme` | `int(25)` | `3` | The color used by the theme for this user. |
+| `color_scheme` | `int(25)` | `1`* | The color used by the theme for this user. |
+| `adapt_time` | `tinyiny(1)` | `0` | Whether or not the time should adapt automatically. |
+| `accent` | `int(25)` | `1`* | The color used by the Backstage for this user. |
+| `enforce_accent` | `tinyiny(1)` | `0` | If the accent should be enforced. |
+
+*This is a random number between 1 and 15, `color_scheme` and `accent` will always use the same random number.

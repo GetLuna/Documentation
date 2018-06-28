@@ -16,7 +16,6 @@ This is a list of files that are required to be in your theme, grouped to show y
 * `header.php`
 * `help.php`
 * `inbox.php`
-* `inbox-delete.php`
 * `inbox-delete-comment.php`
 * `inbox-new.php`
 * `inbox-view.php`

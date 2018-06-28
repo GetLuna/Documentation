@@ -15,7 +15,7 @@
                 "icon": "fal fa-fw fa-code",
                 "pages" : [
                     { "id": "index_develop_for",    "title": "Develop for Luna" },
-                    { "id": "index_develop",        "title": "Develop Luna" }
+                    { "id": "tools",                "title": "Develop Luna" }
                 ]
             }, {
                 "title": "Brand",
@@ -146,6 +146,7 @@
                 "title": "Develop",
                 "icon": "fal fa-fw fa-wrench",
                 "pages" : [
+                    { "id": "tools",                "title": "Developer tools" },
                     { "id": "conventions",          "title": "Coding conventions" },
                     { "id": "css_conventions",      "title": "(S)CSS coding conventions" }
                 ]

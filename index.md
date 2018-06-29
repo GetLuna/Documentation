@@ -4,8 +4,19 @@
 	<a href="install" class="btn btn-light btn-docs btn-block">
 		<div class="row">
 			<div class="col-11">
-				<h2><i class="fal fa-fw fa-tachometer-alt"></i> Install &amp; Backstage</h2>
-				<p>Install, update and manage your board</p>
+				<h2><i class="fal fa-fw fa-play-circle"></i> Get started</h2>
+				<p>System requirements and installation instructions</p>
+			</div>
+			<div class="col-1 col-arrow">
+				<i class="fal fa-fw fa-arrow-right"></i>
+			</div>
+		</div>
+	</a>
+	<a href="backstage" class="btn btn-light btn-docs btn-block">
+		<div class="row">
+			<div class="col-11">
+				<h2><i class="fal fa-fw fa-tachometer-alt"></i> Backstage</h2>
+				<p>Manage your board</p>
 			</div>
 			<div class="col-1 col-arrow">
 				<i class="fal fa-fw fa-arrow-right"></i>
@@ -23,10 +34,11 @@
 			</div>
 		</div>
 	</a>
+	<hr />
 	<a href="index_develop_for" class="btn btn-light btn-docs btn-block">
 		<div class="row">
 			<div class="col-11">
-				<h2><i class="fal fa-fw fa-puzzle-piece"></i> Develop for Luna</h2>
+				<h2><i class="fal fa-fw fa-puzzle-piece"></i> Extend Luna</h2>
 				<p>How to build extentions, translations and themes</p>
 			</div>
 			<div class="col-1 col-arrow">
@@ -34,7 +46,7 @@
 			</div>
 		</div>
 	</a>
-	<a href="index_develop" class="btn btn-light btn-docs btn-block">
+	<a href="tools" class="btn btn-light btn-docs btn-block">
 		<div class="row">
 			<div class="col-11">
 				<h2><i class="fal fa-fw fa-code"></i> Develop Luna</h2>
@@ -45,10 +57,11 @@
 			</div>
 		</div>
 	</a>
-	<a href="index_design" class="btn btn-light btn-docs btn-block">
+	<hr />
+	<a href="identity" class="btn btn-light btn-docs btn-block">
 		<div class="row">
 			<div class="col-11">
-				<h2><i class="fal fa-fw fa-object-ungroup"></i> Design guidelines</h2>
+				<h2><i class="fal fa-fw fa-swatchbook"></i> Design guidelines</h2>
 				<p>Designing Luna</p>
 			</div>
 			<div class="col-1 col-arrow">
@@ -85,7 +98,7 @@
 		<div class="row">
 			<div class="col-11">
 				<h2><i class="fal fa-fw fa-box-heart"></i> Request a feature</h2>
-				<p>Woud you like to see something enw? Request it on GitHub!</p>
+				<p>Woud you like to see something new? Request it on GitHub!</p>
 			</div>
 			<div class="col-1 col-arrow">
 				<i class="fal fa-fw fa-arrow-right"></i>

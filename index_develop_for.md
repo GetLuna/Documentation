@@ -1,4 +1,4 @@
-# Develop for Luna
+# Extend Luna
 <div class="row">
     <div class="col-6 col-md-4">
         <div class="list-group">

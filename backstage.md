@@ -1,5 +1,5 @@
-# Setting up your board
-Here are some pages in the Backstage you might want to stop by after you've set up your brand new forum.
+# Backstage
+Backstage is your hub to control your board. Anything your board can do, can be changed here.
 
 ## Backstage
 The Backstage page contains all features and functions that don't have a direct impact on the working of the forum.

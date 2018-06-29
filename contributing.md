@@ -29,7 +29,7 @@ For bugs, you best make a ticket, unless you are able to fix it yourself and are
 		<div class="row">
 			<div class="col-11">
 				<h2><i class="fal fa-fw fa-box-open"></i> Request a feature</h2>
-				<p>Woud you like to see something enw? Request it on GitHub!</p>
+				<p>Woud you like to see something new? Request it on GitHub!</p>
 			</div>
 			<div class="col-1 col-arrow">
 				<i class="fal fa-fw fa-arrow-right"></i>

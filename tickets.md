@@ -37,7 +37,7 @@ When requesting a new feature or reporting a bug on GitHub, you will be provided
 		<div class="row">
 			<div class="col-11">
 				<h2><i class="fal fa-fw fa-box-open"></i> Request a feature</h2>
-				<p>Woud you like to see something enw? Request it on GitHub!</p>
+				<p>Woud you like to see something new? Request it on GitHub!</p>
 			</div>
 			<div class="col-1 col-arrow">
 				<i class="fal fa-fw fa-arrow-right"></i>

@@ -4,30 +4,39 @@
         "index": "index",
         "categories": [
             {
-                "title": "Use",
-                "icon": "fal fa-fw fa-mouse-pointer",
+                "title": "Luna",
+                "icon": "fal fa-fw fa-moon",
                 "pages" : [
-                    { "id": "install",              "title": "Install & Backstage" },
+                    { "id": "install",              "title": "Get started" },
+                    { "id": "backstage",            "title": "Backstage" },
                     { "id": "editor",               "title": "Mainstage" }
                 ]
             }, {
                 "title": "Developers",
                 "icon": "fal fa-fw fa-code",
                 "pages" : [
-                    { "id": "index_develop_for",    "title": "Develop for Luna" },
+                    { "id": "index_develop_for",    "title": "Extend Luna" },
                     { "id": "tools",                "title": "Develop Luna" }
                 ]
             }, {
-                "title": "Brand",
-                "icon": "fal fa-fw fa-object-ungroup",
+                "title": "Design",
+                "icon": "fal fa-fw fa-swatchbook",
                 "pages" : [
-                    { "id": "index_design",         "title": "Design guidelines" }
+                    { "id": "identity",             "title": "Design guidelines" }
+                ]
+            }, {
+                "title": "More",
+                "icon": "fal fa-fw fa-plus",
+                "pages" : [
+                    { "id": "../releases",          "title": "Release notes" },
+                    { "id": "https://github.com/GetLuna/Luna/issues/new?template=bug_report.md", "title": "Bug report" },
+                    { "id": "https://github.com/GetLuna/Luna/issues/new?template=feature_request.md", "title": "Feature request" }
                 ]
             }
         ]
     },
     {
-        "id": "manage",
+        "id": "getstarted",
         "index": "install",
         "categories": [
             { 
@@ -37,7 +46,14 @@
                     { "id": "install",              "title": "Installation" },
                     { "id": "first",                "title": "First steps" }
                 ]
-            }, {
+            }
+        ]
+    },
+    {
+        "id": "backstage",
+        "index": "backstage",
+        "categories": [
+            { 
                 "title": "Backstage",
                 "icon": "fal fa-fw fa-tachometer-alt",
                 "pages" : [

@@ -15,7 +15,7 @@
                 "title": "Developers",
                 "icon": "fal fa-fw fa-code",
                 "pages" : [
-                    { "id": "index_develop_for",    "title": "Extend Luna" },
+                    { "id": "themes",               "title": "Extend Luna" },
                     { "id": "tools",                "title": "Develop Luna" }
                 ]
             }, {
@@ -122,15 +122,14 @@
                 "title": "General",
                 "icon": "fal fa-fw fa-info-circle",
                 "pages" : [
-                    { "id": "cookies",              "title": "Cookies" },
-                    { "id": "data",                 "title": "Data collection" }
+                    { "id": "cookies",              "title": "Cookies" }
                 ]
             }
         ]
     },
     {
         "id": "for",
-        "index": "index_develop_for",
+        "index": "themes",
         "categories": [
             { 
                 "title": "Customize",
@@ -156,7 +155,7 @@
     },
     {
         "id": "develop",
-        "index": "index_develop",
+        "index": "tools",
         "categories": [
             {
                 "title": "Develop",
@@ -186,7 +185,7 @@
     },
     {
         "id": "design",
-        "index": "index_design",
+        "index": "identity",
         "categories": [
             {
                 "title": "Brand",

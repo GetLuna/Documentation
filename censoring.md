@@ -11,4 +11,4 @@ If you censor a word and the replacement word itself is already censored as well
 ## Editing and removing words
 On the right hand side you can see an overview of all censored words and their replacement. Here you can change which words are censored and update them. Additionally, you can remove a word by clicking "Delete".
 
-Note that you cannot edit more than one word at a time, so don't change two rows and click "Update", it will only update that specific row.
+Note that you cannot edit and remove multiple words at a time. Editing multiple words is possible, but removing words while doing that will cause the page to reset. First save your changes before removing words.

@@ -7,4 +7,4 @@ You can add a new emoji by entering a BBCode (e.g. `:)`) in the sidebar followed
 ## Editing and removing emoji
 On the right hand side you can see an overview of all emoji. Here you can change which BBCode should create which emoji. Additionally, you can remove an emoji by clicking "Delete".
 
-Note that you cannot edit more than one emoji at a time, so don't change two rows and click "Update", it will only update that specific row.
+Note that you cannot edit and remove multiple emoji at a time. Editing multiple emoji is possible, but removing an emoji while doing that will cause the page to reset. First save your changes before removing an emoji.

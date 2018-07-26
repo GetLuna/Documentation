@@ -137,6 +137,11 @@
                 "pages" : [
                     { "id": "themes",               "title": "Themes" },
                     { "id": "plugins",              "title": "Plugins" },
+                    { "id": "theming_footer",       "title": "Theming <code>footer.php</code>"},
+                    { "id": "theming_header",       "title": "Theming <code>header.php</code>"},
+                    { "id": "theming_profile",      "title": "Theming <code>profile.php</code>"},
+                    { "id": "theming_settings",     "title": "Theming <code>settings.php</code>"},
+                    { "id": "theming_pagination",   "title": "Theming pagination" }
                     { "id": "translations",         "title": "Language packs" }
                 ]
             }, {

@@ -2,9 +2,9 @@
 ## System requirements
 You are going to need a number of things before you can run Luna.
 
-* PHP 5.3 or later, PHP 7.1 or later recommended
+* PHP 5.4 or later, PHP 7.1 or later recommended
 * A database running either
-	* MySQL (Improved) 5.5 or later
+	* MySQL Improved 5.5 or later
 	* SQLite 2 or 3
 	* PostgreSQL 8.0 or later
 * Recommended

@@ -35,7 +35,7 @@
 		</div>
 	</a>
 	<hr />
-	<a href="index_develop_for" class="btn btn-light btn-docs btn-block">
+	<a href="themes" class="btn btn-light btn-docs btn-block">
 		<div class="row">
 			<div class="col-11">
 				<h2><i class="fal fa-fw fa-puzzle-piece"></i> Extend Luna</h2>

@@ -9,7 +9,7 @@ When you want to help out developing Luna, there are a number of tools you are g
 - [GitHub Desktop](https://desktop.github.com) is a GUI on top of Git made by GitHub. Given that we use GitHub, it is the obvious choice.
 - [XAMPP](https://www.apachefriends.org) is our development environment. Luna runs locally on this system.
 
-With the exception of Git, you can of course use whatever you want. Prefer PHPStorm for software development? That's fine. You make your IDE compile your SCSS. Nice, also, ping me if you have any recommendations on that. You prefer GitKraken or not GUI at all? Go for it. The only thing you're really chained to when developing Luna is Git and GitHub's website.
+With the exception of Git, you can of course use whatever you want. Prefer PHPStorm for software development? That's fine. You make your IDE compile your SCSS. Nice, also, ping me if you have any recommendations on that. You prefer GitKraken or no GUI at all? Go for it. The only thing you're really chained to when developing Luna is Git and GitHub's website.
 
 ## Visual Studio Code
 [Visual Studio Code](https://code.visualstudio.com) is a development environment made by Microsoft. With great support for SCSS, Markdown, PHP and other languages used in Luna, it is good choice as development environment.

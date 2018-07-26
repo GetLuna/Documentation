@@ -68,17 +68,12 @@ require LUNA_ROOT.'include/common.php';
 ```
 
 ### `LUNA_DEBUG`
-Defining `LUNA_DEBUG` enables debug mode, which makes Luna display more detailed/sensitive error messages. Script generation time and number of queries executed will also be shown in the footer. Debug mode should <em>not</em> be enabled on a production site, since it can potentially give a malicious user sensitive information about a server. However, enabling debug mode is an integral step to reporting/diagnosing forum errors. Without the information it provides, it can be nearly impossible for the developers to figure out the underlying cause of an issue.
+Defining `LUNA_DEBUG` enables debug mode, which makes Luna display more detailed/sensitive error messages. Script generation time and number of queries executed will also be shown in the footer. Additionally, it makes all the queries executed during a pageview display in the footer. This feature is only useful for developing and should _never_ be used in a production environment because of the potential for disclosure of sensitive information.
+
+However, enabling debug mode is an integral step to reporting/diagnosing forum errors. Without the information it provides, it can be nearly impossible for the developers to figure out the underlying cause of an issue.
 
 ```php
 define('LUNA_DEBUG', 1);
-```
-
-### `LUNA_SHOW_QUERIES`
-Defining `LUNA_SHOW_QUERIES` makes all the queries executed during a pageview display in the footer. This feature is only useful for developing and should <em>never</em> be used in a production environment because of the potential for disclosure of sensitive information.
-
-```php
-define('LUNA_SHOW_QUERIES', 1);
 ```
 
 ### `LUNA_TURN_OFF_MAINT`

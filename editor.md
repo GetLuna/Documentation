@@ -1,9 +1,9 @@
 # Editor and BBCode
 Luna has a very simple editor to use its BBCode features. This editor shows and allows you to include most of the supported BBCodes into your comments, however, it also contains a couple of additional features.
 
-![Luna editor](https://getluna.org/docs/img/editor.png)
+![Luna editor](https://getluna.org/img/editor.png)
 
-# Basic features
+## Basic features
 From left to right, the upper toolbar has the following features:
 
 * Pin the thread to its forum, this will make the thread stay on the top of the list, only available for admins and moderators with the required permissions when creating a new thread and editing the opening comment.
@@ -26,12 +26,12 @@ From left to right, the upper toolbar has the following features:
 
 The bottom toolbar allows you to preview and submit your comment.
 
-# Other BBCode features
+## Other BBCode features
 Additional to the features listed above, Luna supports other features in its BBCode implementation that are not included in the editor.
 
-* A range of emoticons.
+* A range of emojis, including but not limited to `:)`, `:(`, `:@`, `;)` and `:P`.
 * `[ins][/ins]` Insert text, visual identical to strike-through text in most browsers.
-* `[color=&lt;color&gt;][/color]` Where `&lt;color&gt;` is a color in either hexadecimal notation or name, changes the color of the text.
+* `[color=<color>][/color]` Where `<color>` is a color in either hexadecimal notation or name, changes the color of the text.
 * `[email][/email]` Add an email address.
 * `[list=1][/list]` Make an ordered list.
 * `[list=*][/list]` Another notation for an unordered list.
@@ -39,5 +39,7 @@ Additional to the features listed above, Luna supports other features in its BBC
 Additional to those options, there is a third set of features that have to be enabled in the Backstage to be used, just like the list above, these options do not appear in the editor.
 
 * `[center][/center]` Center the content.
-* `[size=&lt;size&gt;][/size]` Where `&lt;size&gt;` in percentage relative to normal text in which size the text has to be displayed.
+* `[size=<size>][/size]` Where `<size>` in percentage relative to normal text in which size the text has to be displayed.
 * `[spoiler][/spoiler]` Will hide content by default until clicked.
+
+Note that it is possible to disable the use of emojis, images and urls as well.

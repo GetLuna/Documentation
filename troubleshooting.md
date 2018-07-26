@@ -10,7 +10,7 @@ Similarly to the `/cache/` folder, Luna requires write access to the `/img/avata
 In order to decrease the load on the database server, Luna caches parts of the database to PHP scripts in the `/cache/` directory. To update the cache simply delete all PHP scripts in the `/cache/` directory. Luna will regenerate them when they are needed.
 
 ### I enabled maintenance mode and cannot login
-If you have enabled maintenance mode and accidentally logged out you will find it impossible to log back in! To remedy this you must open your configuration file (`config.php`) and at the end add: 
+If you have enabled maintenance mode and accidentally logged out you will find it impossible to log back in! To remedy this you must open your configuration file (`config.php`) and at the end add:
 
 ```php
 define('LUNA_TURN_OFF_MAINT', 1);

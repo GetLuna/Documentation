@@ -4,30 +4,114 @@
         "index": "index",
         "categories": [
             {
-                "title": "Documentation",
-                "icon": "fal fa-fw fa-book",
+                "title": "Luna",
+                "icon": "fal fa-fw fa-moon",
                 "pages" : [
-                    { "id": "index_use",            "title": "Use Luna" },
-                    { "id": "index_for",            "title": "Develop for Luna" },
-                    { "id": "index_develop_for",    "title": "Develop Luna" },
-                    { "id": "index_design",         "title": "Design guidelines" }
+                    { "id": "install",              "title": "Get started" },
+                    { "id": "backstage",            "title": "Backstage" },
+                    { "id": "editor",               "title": "Mainstage" }
+                ]
+            }, {
+                "title": "Developers",
+                "icon": "fal fa-fw fa-code",
+                "pages" : [
+                    { "id": "themes",               "title": "Extend Luna" },
+                    { "id": "tools",                "title": "Develop Luna" }
+                ]
+            }, {
+                "title": "Design",
+                "icon": "fal fa-fw fa-swatchbook",
+                "pages" : [
+                    { "id": "identity",             "title": "Design guidelines" }
+                ]
+            }, {
+                "title": "More",
+                "icon": "fal fa-fw fa-plus",
+                "pages" : [
+                    { "id": "../releases",          "title": "Release notes" },
+                    { "id": "https://github.com/GetLuna/Luna/issues/new?template=bug_report.md", "title": "Bug report" },
+                    { "id": "https://github.com/GetLuna/Luna/issues/new?template=feature_request.md", "title": "Feature request" }
                 ]
             }
         ]
     },
     {
-        "id": "use",
-        "index": "index_use",
+        "id": "getstarted",
+        "index": "install",
         "categories": [
             { 
                 "title": "Get started",
                 "icon": "fal fa-fw fa-moon",
                 "pages" : [
                     { "id": "install",              "title": "Installation" },
-                    { "id": "setup",                "title": "Setting up your board" },
-                    { "id": "upgrading",            "title": "Updating" }
+                    { "id": "first",                "title": "First steps" }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "backstage",
+        "index": "backstage",
+        "categories": [
+            { 
+                "title": "Backstage",
+                "icon": "fal fa-fw fa-tachometer-alt",
+                "pages" : [
+                    { "id": "backstage",            "title": "Backstage" },
+                    { "id": "update",               "title": "Update & about" }
                 ]
             }, {
+                "title": "Content",
+                "icon": "fal fa-fw fa-file",
+                "pages" : [
+                    { "id": "categories",           "title": "Categories" },
+                    { "id": "forums",               "title": "Forums" },
+                    { "id": "reports",              "title": "Reports" },
+                    { "id": "censoring",            "title": "Censoring" }
+                ]
+            }, {
+                "title": "Users",
+                "icon": "fal fa-fw fa-users",
+                "pages" : [
+                    { "id": "ranks",                "title": "Ranks" },
+                    { "id": "groups",               "title": "Groups" },
+                    { "id": "bans",                 "title": "Bans" }
+                ]
+            }, {
+                "title": "Settings",
+                "icon": "fal fa-fw fa-cogs",
+                "pages" : [
+                    { "id": "settings",             "title": "Settings" },
+                    { "id": "features",             "title": "Features" },
+                    { "id": "appearance",           "title": "Appearance" },
+                    { "id": "theme",                "title": "Theme" },
+                    { "id": "emoji",                "title": "Emoji" },
+                    { "id": "menu",                 "title": "Menu" }
+                ]
+            }, {
+                "title": "Maintenance",
+                "icon": "fal fa-fw fa-coffee",
+                "pages" : [
+                    { "id": "maintenance",          "title": "Maintenance" },
+                    { "id": "prune",                "title": "Prune" }
+                ]
+            }, {
+                "title": "Extra's",
+                "icon": "fal fa-fw fa-plus",
+                "pages" : [
+                    { "id": "fontawesome",          "title": "Font Awesome" },
+                    { "id": "antispam",             "title": "Fighting spam" },
+                    { "id": "customizing",          "title": "Customizing" },
+                    { "id": "troubleshooting",      "title": "Troubleshooting" }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "use",
+        "index": "editor",
+        "categories": [
+            {
                 "title": "Mainstage",
                 "icon": "fal fa-fw fa-home",
                 "pages" : [
@@ -35,54 +119,46 @@
                     { "id": "labels",               "title": "Thread labels" }
                 ]
             }, {
-                "title": "Backstage",
-                "icon": "fal fa-fw fa-tachometer-alt",
-                "pages" : [
-                    { "id": "backstage",            "title": "Backstage" },
-                    { "id": "organizing",           "title": "Organizing" },
-                    { "id": "admin",                "title": "Administration" },
-                    { "id": "antispam",             "title": "Fighting spam" }
-                ]
-            }, {
-                "title": "Customize",
-                "icon": "fal fa-fw fa-paint-brush",
-                "pages" : [
-                    { "id": "fontawesome",          "title": "Font Awesome" },
-                    { "id": "customizing",          "title": "Customizing" }
-                ]
-            }, {
-                "title": "Develop",
-                "icon": "fal fa-fw fa-wrench",
-                "pages" : [
-                    { "id": "troubleshooting",      "title": "Troubleshooting" }
-                ]
-            }, {
                 "title": "General",
                 "icon": "fal fa-fw fa-info-circle",
                 "pages" : [
-                    { "id": "cookies",              "title": "Cookies" },
-                    { "id": "data",                 "title": "Data collection" }
+                    { "id": "cookies",              "title": "Cookies" }
                 ]
             }
         ]
     },
     {
         "id": "for",
-        "index": "index_develop_for",
+        "index": "themes",
         "categories": [
-            { 
-                "title": "Customize",
-                "icon": "fal fa-fw fa-paint-brush",
+            {
+                "title": "Themes",
+                "icon": "fal fa-fw fa-palette",
                 "pages" : [
                     { "id": "themes",               "title": "Themes" },
-                    { "id": "plugins",              "title": "Plugins" },
+                    { "id": "theming_footer",       "title": "Theming <code>footer.php</code>"},
+                    { "id": "theming_header",       "title": "Theming <code>header.php</code>"},
+                    { "id": "theming_profile",      "title": "Theming <code>profile.php</code>"},
+                    { "id": "theming_settings",     "title": "Theming <code>settings.php</code>"},
+                    { "id": "theming_pagination",   "title": "Theming pagination" }
+                ]
+            }, {
+                "title": "Translations",
+                "icon": "fal fa-fw fa-language",
+                "pages" : [
                     { "id": "translations",         "title": "Language packs" }
                 ]
             }, {
-                "title": "References",
-                "icon": "fal fa-fw fa-bookmark",
+                "title": "Plugins",
+                "icon": "fal fa-fw fa-puzzle-piece",
                 "pages" : [
-                    { "id": "constats",             "title": "Constants" },
+                    { "id": "plugins",              "title": "Plugins" }
+                ]
+            }, {
+                "title": "References",
+                "icon": "fal fa-fw fa-id-card",
+                "pages" : [
+                    { "id": "constants",            "title": "Constants" },
                     { "id": "dbstructure",          "title": "Database structure" },
                     { "id": "dblayer",              "title": "Database layer" },
                     { "id": "variables",            "title": "Global variables" },
@@ -94,14 +170,15 @@
     },
     {
         "id": "develop",
-        "index": "index_develop",
+        "index": "tools",
         "categories": [
             {
                 "title": "Develop",
                 "icon": "fal fa-fw fa-wrench",
                 "pages" : [
-                    { "id": "php_conventions",      "title": "PHP coding conventions" },
-                    { "id": "css_conventions",      "title": "CSS coding conventions" }
+                    { "id": "tools",                "title": "Developer tools" },
+                    { "id": "conventions",          "title": "Coding conventions" },
+                    { "id": "css_conventions",      "title": "(S)CSS coding conventions" }
                 ]
             }, {
                 "title": "Contributing",
@@ -123,7 +200,7 @@
     },
     {
         "id": "design",
-        "index": "index_design",
+        "index": "identity",
         "categories": [
             {
                 "title": "Brand",

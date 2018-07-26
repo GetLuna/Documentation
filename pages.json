@@ -131,22 +131,32 @@
         "id": "for",
         "index": "themes",
         "categories": [
-            { 
-                "title": "Customize",
-                "icon": "fal fa-fw fa-paint-brush",
+            {
+                "title": "Themes",
+                "icon": "fal fa-fw fa-palette",
                 "pages" : [
                     { "id": "themes",               "title": "Themes" },
-                    { "id": "plugins",              "title": "Plugins" },
                     { "id": "theming_footer",       "title": "Theming <code>footer.php</code>"},
                     { "id": "theming_header",       "title": "Theming <code>header.php</code>"},
                     { "id": "theming_profile",      "title": "Theming <code>profile.php</code>"},
                     { "id": "theming_settings",     "title": "Theming <code>settings.php</code>"},
                     { "id": "theming_pagination",   "title": "Theming pagination" }
+                ]
+            }, {
+                "title": "Translations",
+                "icon": "fal fa-fw fa-language",
+                "pages" : [
                     { "id": "translations",         "title": "Language packs" }
                 ]
             }, {
+                "title": "Plugins",
+                "icon": "fal fa-fw fa-puzzle-piece",
+                "pages" : [
+                    { "id": "plugins",              "title": "Plugins" }
+                ]
+            }, {
                 "title": "References",
-                "icon": "fal fa-fw fa-bookmark",
+                "icon": "fal fa-fw fa-id-card",
                 "pages" : [
                     { "id": "constants",            "title": "Constants" },
                     { "id": "dbstructure",          "title": "Database structure" },
